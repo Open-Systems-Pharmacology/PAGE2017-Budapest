@@ -1,0 +1,1204 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ReactionBuildingBlock id="t5s0DH9GaUCb3Hqg3NeXJw" name="Mouse ADC i.v. 0.3 mg/kg" icon="Reaction" bbVersion="38" version="11" modelLicences="" cs="213CF389">
+  <Creation createdAt="5247477152816047692" createdBy="gbckb" creationMode="New" origin="PKSim" version="6.0.2" />
+  <Builders>
+    <ReactionBuilder id="LpGBXf5veE-wo6ep5QGpwQ" name="FcRn binding ADC in endosomal space" icon="Reaction" mode="Logical" containerType="Reaction" dimension="Amount per time" createProcessRateParameter="0" processRateParameterPersistable="0" formula="KhXAvI9Rs02pZQF5KN-7LA">
+      <ContainerCriteria />
+      <Educts>
+        <ReactionPartnerBuilder moleculeName="FcRn" stoichiometricCoefficient="1" />
+      </Educts>
+      <ModifierNames>
+        <ModifierNamesChild>FcRn kinetics endosome</ModifierNamesChild>
+      </ModifierNames>
+    </ReactionBuilder>
+    <ReactionBuilder id="jnCzPIe_ykWU4hHh0glh9Q" name="FcRn binding ADC in interstitial" icon="Reaction" mode="Logical" containerType="Reaction" dimension="Amount per time" createProcessRateParameter="0" processRateParameterPersistable="0" formula="fipMqBcM7EmFznRhA0gGfg">
+      <ContainerCriteria />
+      <Educts>
+        <ReactionPartnerBuilder moleculeName="FcRn" stoichiometricCoefficient="1" />
+      </Educts>
+      <ModifierNames>
+        <ModifierNamesChild>FcRn kinetics interstitial</ModifierNamesChild>
+      </ModifierNames>
+    </ReactionBuilder>
+    <ReactionBuilder id="8CdZY4RiNEmYjCzYNrXCJQ" name="FcRn binding ADC in plasma" icon="Reaction" mode="Logical" containerType="Reaction" dimension="Amount per time" createProcessRateParameter="0" processRateParameterPersistable="0" formula="0v4v_b9PFUaUJew9g9QD6Q">
+      <ContainerCriteria />
+      <Educts>
+        <ReactionPartnerBuilder moleculeName="FcRn" stoichiometricCoefficient="1" />
+      </Educts>
+      <ModifierNames>
+        <ModifierNamesChild>FcRn kinetics plasma</ModifierNamesChild>
+      </ModifierNames>
+    </ReactionBuilder>
+    <ReactionBuilder id="L65arx7KHEGZHxkyLRV8Uw" name="FcRn binding endogenous Igg" description="Binding to FcRn in endogenous Igg" icon="Reaction" mode="Logical" containerType="Reaction" dimension="Amount per time" createProcessRateParameter="0" processRateParameterPersistable="0" formula="UKRcJ6qauEqDpro-W3IiMg">
+      <ContainerCriteria />
+      <Educts>
+        <ReactionPartnerBuilder moleculeName="FcRn" stoichiometricCoefficient="1" />
+        <ReactionPartnerBuilder moleculeName="LigandEndo" stoichiometricCoefficient="1" />
+      </Educts>
+      <Products>
+        <ReactionPartnerBuilder moleculeName="LigandEndo_Complex" stoichiometricCoefficient="1" />
+      </Products>
+    </ReactionBuilder>
+    <ReactionBuilder id="7b062ReDIUaHOGIanbo2dQ" name="FcRn binding tissue ADC" icon="Reaction" mode="Logical" containerType="Reaction" dimension="Amount per time" createProcessRateParameter="0" processRateParameterPersistable="0" formula="aP1TgbOF5EeZKFSz73Tdcg">
+      <ContainerCriteria />
+      <Educts>
+        <ReactionPartnerBuilder moleculeName="ADC" stoichiometricCoefficient="1" />
+      </Educts>
+      <Products>
+        <ReactionPartnerBuilder moleculeName="ADC-FcRn_Complex" stoichiometricCoefficient="1" />
+      </Products>
+    </ReactionBuilder>
+    <ReactionBuilder id="ZSkc-MZR40uHFuPHK5JIQg" name="ADC-TMEFF2-Boswell et al" icon="SpecificBinding" mode="Logical" containerType="Reaction" dimension="Amount per time" createProcessRateParameter="0" processRateParameterPersistable="0" formula="9L9Kjy0ZDUSIyiRMVyd6VA">
+      <Children>
+        <Parameter id="0BRg2rwi-0qdKicLqSNb4w" name="koff" description="Dissociation rate constant" icon="Parameter" persistable="0" isFixedValue="0" dim="Inversed time" quantityType="Parameter" negativeValuesAllowed="1" buildMode="Global" value="0.9" displayUnit="1/min">
+          <Info min="0" flag="122" seq="1" ref="0" bb="4" group="131" />
+          <Origin bb="5RmFWG0iREO4ZuS3ZQwRuQ" para="d7PO7XBChkupmtXOu0QZrQ" />
+        </Parameter>
+        <Parameter id="82S-P8mfMEmGGapa8AHVMQ" name="Kd" description="Dissociation constant" icon="Parameter" persistable="0" isFixedValue="0" dim="Concentration (molar)" quantityType="Parameter" negativeValuesAllowed="1" buildMode="Global" value="0.01" displayUnit="µmol/l">
+          <Info min="0" flag="106" seq="2" ref="0" bb="4" group="131" />
+          <Origin bb="5RmFWG0iREO4ZuS3ZQwRuQ" para="B5VwQE2IrUWRJxMOGjTPlw" />
+        </Parameter>
+      </Children>
+      <ContainerCriteria />
+      <Educts>
+        <ReactionPartnerBuilder moleculeName="ADC" stoichiometricCoefficient="1" />
+        <ReactionPartnerBuilder moleculeName="TMEFF2" stoichiometricCoefficient="1" />
+      </Educts>
+      <Products>
+        <ReactionPartnerBuilder moleculeName="ADC-TMEFF2 Complex" stoichiometricCoefficient="1" />
+      </Products>
+    </ReactionBuilder>
+    <ReactionBuilder id="hWy2uNBv7kuu8aL1q7z1Ng" name="Toxophore-Total Hepatic Clearance-Literature" icon="Liver" mode="Logical" containerType="Reaction" dimension="Amount per time" createProcessRateParameter="0" processRateParameterPersistable="0" formula="-ULDmbYhfkCNExVwo5Eh2A">
+      <Children>
+        <Parameter id="Z-AYwZt2MUOBh7lpGDoIpA" name="Vf (protein,blood cells)" description="Fractional volume content of protein in blood cells used in the partition coefficient calculation method 'PK-Sim Standard'" icon="Parameter" persistable="0" isFixedValue="0" quantityType="Parameter" negativeValuesAllowed="1" buildMode="Global" value="0.325">
+          <Info min="0" max="1" flag="36" seq="1" ref="0" bb="4" group="130" />
+          <Origin bb="Sr3tkJjIhkq4tmtvDgSM-A" para="kyLYCJtAo0mP6LCMPK0RqA" />
+        </Parameter>
+        <Parameter id="Y2FIuBfhOECT5TEiLvX9qg" name="Vf (water,blood cells)" description="Fractional volume content of water in blood cells used in the partition coefficient calculation method 'PK-Sim Standard'" icon="Parameter" persistable="0" isFixedValue="0" quantityType="Parameter" negativeValuesAllowed="1" buildMode="Global" value="0.625">
+          <Info min="0" max="1" flag="36" seq="1" ref="0" bb="4" group="130" />
+          <Origin bb="Sr3tkJjIhkq4tmtvDgSM-A" para="RDg2PbGb90OhDYrYtDmItw" />
+        </Parameter>
+        <Parameter id="hhus1h-nEEy52s3ADx4kQA" name="Body weight" description="Body weight" icon="Parameter" persistable="0" isFixedValue="0" dim="Mass" quantityType="Parameter" negativeValuesAllowed="1" buildMode="Global" value="0.021011" displayUnit="kg">
+          <Info min="0" flag="42" seq="1" ref="0" bb="4" group="130" />
+          <Origin bb="Sr3tkJjIhkq4tmtvDgSM-A" para="Nvl6S81XvkqrJL68FTKB_g" />
+        </Parameter>
+        <Parameter id="mP4gd9jXckC8KXKb86Hyzg" name="Vf (lipid, blood cells)" description="Fractional volume content of lipid in blood cells" icon="Parameter" persistable="0" isFixedValue="0" quantityType="Parameter" negativeValuesAllowed="1" buildMode="Global" value="0.005">
+          <Info min="0" max="1" flag="36" seq="1" ref="0" bb="4" group="130" />
+          <Origin bb="Sr3tkJjIhkq4tmtvDgSM-A" para="hMAE6J0UYEarvN_ILWfEHw" />
+        </Parameter>
+        <Parameter id="m9jY_lV7CEeRsPyMxR7_tg" name="Volume (liver)" description="Volume of the liver" icon="Parameter" persistable="0" isFixedValue="0" dim="Volume" quantityType="Parameter" negativeValuesAllowed="1" buildMode="Global" value="0.0013" displayUnit="l">
+          <Info min="0" flag="42" seq="2" ref="0" bb="4" group="130" />
+          <Origin bb="Sr3tkJjIhkq4tmtvDgSM-A" para="XdH4cMmMlkiRgY1F6AetZQ" />
+        </Parameter>
+        <Parameter id="-KdDoGltV0Wvt8r5pG0taw" name="Hematocrit" description="Hematocrit" icon="Parameter" persistable="0" isFixedValue="0" quantityType="Parameter" negativeValuesAllowed="1" buildMode="Global" value="0.45">
+          <Info min="0" max="1" flag="42" seq="3" ref="0" bb="4" group="130" />
+          <Origin bb="Sr3tkJjIhkq4tmtvDgSM-A" para="9t3--RsH1EiWvNc8C9fKgw" />
+        </Parameter>
+        <Parameter id="CvV2VGKMQEW4pgeU2ap97w" name="Blood flow rate (liver)" description="Blood flow rate to  liver" icon="Parameter" persistable="0" isFixedValue="0" dim="Flow" quantityType="Parameter" negativeValuesAllowed="1" buildMode="Global" value="0.00035" displayUnit="l/min">
+          <Info min="0" flag="42" seq="4" ref="0" bb="4" group="130" />
+          <Origin bb="Sr3tkJjIhkq4tmtvDgSM-A" para="SAMogD0kk02WeGQ6PtbVow" />
+        </Parameter>
+        <Parameter id="ilFR-2YjMUaYM6ThlP3gvA" name="Blood flow rate (portal vein)" description="Blood flow rate in portal vein" icon="Parameter" persistable="0" isFixedValue="0" dim="Flow" quantityType="Parameter" negativeValuesAllowed="1" buildMode="Global" value="0.00175200000000001" displayUnit="l/min">
+          <Info min="0" flag="42" seq="5" ref="0" bb="4" group="130" />
+          <Origin bb="Sr3tkJjIhkq4tmtvDgSM-A" para="iAu4USY-tUy5P80tAHqQig" />
+        </Parameter>
+        <Parameter id="9-lm1_NeT026Ven2Zoghrw" name="Fraction intracellular (liver)" description="Fraction of intracellular space of the liver" icon="Parameter" persistable="0" isFixedValue="0" quantityType="Parameter" negativeValuesAllowed="1" buildMode="Global" value="0.722">
+          <Info min="0" max="1" flag="42" seq="6" ref="0" bb="4" group="130" />
+          <Origin bb="Sr3tkJjIhkq4tmtvDgSM-A" para="ITzTe7TCQEuDbA_X2binDw" />
+        </Parameter>
+        <Parameter id="7BUNzDZQZUGpV1Qyr7Apcw" name="Fraction unbound (experiment)" description="Fraction unbound in the experiment" icon="Parameter" persistable="0" isFixedValue="0" dim="Fraction" quantityType="Parameter" negativeValuesAllowed="1" buildMode="Global" value="0.49">
+          <Info min="0" max="1" flag="42" seq="7" ref="0" bb="4" group="130" />
+          <Origin bb="Sr3tkJjIhkq4tmtvDgSM-A" para="qr3JKKFnSEygfUUXLKp7Aw" />
+        </Parameter>
+        <Parameter id="gSdq-1xOpE2K6gusFERAnQ" name="Lipophilicity (experiment)" description="Model dependent lipophilicity measure: LogMA / LogP / ..." icon="Parameter" persistable="0" isFixedValue="0" dim="Log Units" quantityType="Parameter" negativeValuesAllowed="1" buildMode="Global" value="3.2" displayUnit="Log Units">
+          <Info min="-10" max="10" flag="58" seq="8" ref="0" bb="4" group="130" />
+          <Origin bb="Sr3tkJjIhkq4tmtvDgSM-A" para="DUYgbqILFU2kfp3xSg7Veg" />
+        </Parameter>
+        <Parameter id="870djWTl30mhOpXM0np-dg" name="Partition coefficient (water/protein)" description="Partition coefficient water to protein" icon="Parameter" persistable="0" isFixedValue="0" quantityType="Parameter" negativeValuesAllowed="1" formula="-UEOLGwWLE2Pc_SQ5_Si-w" buildMode="Global">
+          <Info min="0" flag="52" seq="9" ref="0" bb="4" group="130" />
+          <Origin bb="Sr3tkJjIhkq4tmtvDgSM-A" para="IRj8_c0WokOd1UvDmChRqw" />
+        </Parameter>
+        <Parameter id="8325N-OY5kyVhhQe92KPwg" name="Blood/Plasma concentration ratio" description="Blood to plasma concentration ratio" icon="Parameter" persistable="0" isFixedValue="0" quantityType="Parameter" negativeValuesAllowed="1" formula="_3RJ9ZCecEKXK7YVpwToqQ" buildMode="Global">
+          <Info min="0" flag="42" seq="10" ref="0" bb="4" group="130" />
+          <Origin bb="Sr3tkJjIhkq4tmtvDgSM-A" para="6ujetVChIUmqRhM2jnzaew" />
+        </Parameter>
+        <Parameter id="i_l0Dkx8m0Oebo_Zuc-JSQ" name="Plasma clearance" description="Plasma clearance" icon="Parameter" persistable="0" isFixedValue="0" dim="Flow per weight" quantityType="Parameter" negativeValuesAllowed="1" buildMode="Global" value="0.008" displayUnit="ml/min/kg">
+          <Info min="0" flag="58" seq="11" ref="0" bb="4" group="130" />
+          <Origin bb="Sr3tkJjIhkq4tmtvDgSM-A" para="lwGHAnjUikiNDnJ53IHw9Q" />
+        </Parameter>
+        <Parameter id="yHQM7UIMO0SzcQMam0TjdA" name="Specific clearance" description="Intrinsic clearance normalized to the volume where the process occurs" icon="Parameter" persistable="0" isFixedValue="0" dim="Inversed time" quantityType="Parameter" negativeValuesAllowed="1" formula="GA7W55yRjU-oZTAYgA-FpQ" buildMode="Global" displayUnit="1/min">
+          <Info min="0" flag="122" seq="12" ref="0" bb="4" group="131" />
+          <Origin bb="Sr3tkJjIhkq4tmtvDgSM-A" para="ZFqDCH4WVUSBnPjMaOEBbg" />
+        </Parameter>
+      </Children>
+      <ContainerCriteria />
+      <Educts>
+        <ReactionPartnerBuilder moleculeName="Toxophore" stoichiometricCoefficient="1" />
+      </Educts>
+      <Products>
+        <ReactionPartnerBuilder moleculeName="Toxophore-Undefined Liver Metabolite" stoichiometricCoefficient="1" />
+      </Products>
+      <ModifierNames>
+        <ModifierNamesChild>Undefined Liver</ModifierNamesChild>
+      </ModifierNames>
+    </ReactionBuilder>
+    <ReactionBuilder id="AQwu7m-g7kemH6jrGbGspg" name="degradation" icon="Reaction" mode="Logical" containerType="Other" dimension="Amount per time" createProcessRateParameter="0" processRateParameterPersistable="0" formula="775acb03-8faf-493b-ac7a-204ab7f9900d">
+      <ContainerCriteria />
+      <Educts>
+        <ReactionPartnerBuilder moleculeName="TMEFF2" stoichiometricCoefficient="1" />
+      </Educts>
+    </ReactionBuilder>
+    <ReactionBuilder id="kSRLkaCLSUeZH7mi76MEuA" name="internalization" icon="Reaction" mode="Logical" containerType="Other" dimension="Amount per time" createProcessRateParameter="0" processRateParameterPersistable="0" formula="c7af027d-d0c1-4cbe-8c7e-25fc57173dce">
+      <Children>
+        <Parameter id="bKesPQDfmkusODfJ4OC6LA" name="k_int" icon="Parameter" persistable="0" isFixedValue="0" dim="Inversed time" quantityType="Parameter" negativeValuesAllowed="1" buildMode="Global" value="0.210184" displayUnit="1/min">
+          <Info flag="10" seq="1" ref="0" bb="2" group="143" />
+          <Origin />
+        </Parameter>
+      </Children>
+      <ContainerCriteria />
+      <Educts>
+        <ReactionPartnerBuilder moleculeName="ADC-TMEFF2 Complex" stoichiometricCoefficient="1" />
+      </Educts>
+      <Products>
+        <ReactionPartnerBuilder moleculeName="ADC_fragment" stoichiometricCoefficient="1" />
+      </Products>
+      <ModifierNames>
+        <ModifierNamesChild>is_interstitial</ModifierNamesChild>
+      </ModifierNames>
+    </ReactionBuilder>
+    <ReactionBuilder id="wAM3ZQsBG0mw1ZCDu4HV1w" name="internalization_cell" icon="Reaction" mode="Logical" containerType="Other" dimension="Amount per time" createProcessRateParameter="0" processRateParameterPersistable="0" formula="eda8930c-14a2-4440-8de5-3ed2779cf20c">
+      <ContainerCriteria />
+      <Products>
+        <ReactionPartnerBuilder moleculeName="Toxophore" stoichiometricCoefficient="3.2" />
+      </Products>
+      <ModifierNames>
+        <ModifierNamesChild>is_cellular</ModifierNamesChild>
+      </ModifierNames>
+    </ReactionBuilder>
+    <ReactionBuilder id="YqiS65XBjEK4rP_XuwDznw" name="synthese" icon="Reaction" mode="Logical" containerType="Other" dimension="Amount per time" createProcessRateParameter="0" processRateParameterPersistable="0" formula="d4aa166e-d22b-454a-bb5b-49134ad0ac2c">
+      <Children>
+        <Parameter id="RGOIfR-2iUO0-5smnBBL8Q" name="k_deg" icon="Parameter" persistable="0" isFixedValue="0" dim="Inversed time" quantityType="Parameter" negativeValuesAllowed="1" buildMode="Global" value="0.0036" displayUnit="1/min">
+          <Info flag="10" seq="1" ref="0" bb="2" group="143" />
+          <Origin />
+        </Parameter>
+        <Parameter id="PVW-iqqpbEu_OeIwW3w3Gg" name="syn_fac" icon="Parameter" persistable="0" isFixedValue="0" quantityType="Parameter" negativeValuesAllowed="1" buildMode="Global" value="1">
+          <Info flag="10" seq="1" ref="0" bb="2" group="143" />
+          <Origin />
+        </Parameter>
+      </Children>
+      <ContainerCriteria />
+      <Products>
+        <ReactionPartnerBuilder moleculeName="TMEFF2" stoichiometricCoefficient="1" />
+      </Products>
+    </ReactionBuilder>
+  </Builders>
+  <FormulaCache>
+    <Formulas>
+      <Formula id="KhXAvI9Rs02pZQF5KN-7LA" name="FcRn binding drug in endosomal space" dim="Amount per time" formula="kass_FcRn*FcRn*(M_bon+M_brn+M_fat+M_tes+M_hrt+M_kid+M_lin+M_liv_periportal + (IsLiverZonated ? M_liv_pericentral : 0)+M_lng+M_mus+M_pan+M_skn+M_sin+M_spl+M_sto+M_duo+M_uje+M_lje+M_uil+M_lil+M_cae+M_colasc+M_coltrans+M_coldesc+M_colsigm+M_rect) - Kd_FcRn_drug*kass_FcRn*(MC_bon+MC_brn+MC_fat+MC_tes+MC_hrt+MC_kid+MC_lin+MC_liv_periportal + (IsLiverZonated ? MC_liv_pericentral : 0)+MC_lng+MC_mus+MC_pan+MC_skn+MC_sin+MC_spl+MC_sto+MC_duo+MC_uje+MC_lje+MC_uil+MC_lil+MC_cae+MC_colasc+MC_coltrans+MC_coldesc+MC_colsigm+MC_rect)">
+        <Paths>
+          <Path path="0" as="1" dim="2" />
+          <Path path="3" as="4" dim="2" />
+          <Path path="5" as="6" dim="2" />
+          <Path path="7" as="8" dim="2" />
+          <Path path="9" as="10" dim="2" />
+          <Path path="11" as="12" dim="2" />
+          <Path path="13" as="14" dim="2" />
+          <Path path="15" as="16" dim="2" />
+          <Path path="17" as="18" dim="2" />
+          <Path path="19" as="20" dim="2" />
+          <Path path="21" as="22" dim="2" />
+          <Path path="23" as="24" dim="2" />
+          <Path path="25" as="26" dim="2" />
+          <Path path="27" as="28" dim="2" />
+          <Path path="29" as="30" dim="2" />
+          <Path path="31" as="32" dim="2" />
+          <Path path="33" as="34" dim="2" />
+          <Path path="35" as="36" dim="2" />
+          <Path path="37" as="38" dim="2" />
+          <Path path="39" as="40" dim="2" />
+          <Path path="41" as="42" dim="2" />
+          <Path path="43" as="44" dim="2" />
+          <Path path="45" as="46" dim="2" />
+          <Path path="47" as="48" dim="2" />
+          <Path path="49" as="50" dim="2" />
+          <Path path="51" as="52" dim="2" />
+          <Path path="53" as="54" dim="2" />
+          <Path path="55" as="56" dim="57" />
+          <Path path="58" as="59" dim="57" />
+          <Path path="60" as="61" dim="2" />
+          <Path path="62" as="63" dim="2" />
+          <Path path="64" as="65" dim="2" />
+          <Path path="66" as="67" dim="2" />
+          <Path path="68" as="69" dim="2" />
+          <Path path="70" as="71" dim="2" />
+          <Path path="72" as="73" dim="2" />
+          <Path path="74" as="75" dim="2" />
+          <Path path="76" as="77" dim="2" />
+          <Path path="78" as="79" dim="2" />
+          <Path path="80" as="81" dim="2" />
+          <Path path="82" as="83" dim="2" />
+          <Path path="84" as="85" dim="2" />
+          <Path path="86" as="87" dim="2" />
+          <Path path="88" as="89" dim="2" />
+          <Path path="90" as="91" dim="2" />
+          <Path path="92" as="93" dim="2" />
+          <Path path="94" as="95" dim="2" />
+          <Path path="96" as="97" dim="2" />
+          <Path path="98" as="99" dim="2" />
+          <Path path="100" as="101" dim="2" />
+          <Path path="102" as="103" dim="2" />
+          <Path path="104" as="105" dim="2" />
+          <Path path="106" as="107" dim="2" />
+          <Path path="108" as="109" dim="2" />
+          <Path path="110" as="111" dim="2" />
+          <Path path="112" as="113" dim="2" />
+          <Path path="114" as="115" dim="116" />
+          <Path path="117" as="118" />
+        </Paths>
+      </Formula>
+      <Formula id="fipMqBcM7EmFznRhA0gGfg" name="FcRn binding drug in interstitial" dim="Amount per time" formula="kass_FcRn*FcRn*(M_bon+M_brn+M_fat+M_tes+M_hrt+M_kid+M_lin+M_liv_periportal + (IsLiverZonated ? M_liv_pericentral : 0)+M_lng+M_mus+M_pan+M_skn+M_sin+M_spl+M_sto+M_duo+M_uje+M_lje+M_uil+M_lil+M_cae+M_colasc+M_coltrans+M_coldesc+M_colsigm+M_rect) - Kd_FcRn_drug*kass_FcRn*(MC_bon+MC_brn+MC_fat+MC_tes+MC_hrt+MC_kid+MC_lin+MC_liv_periportal + (IsLiverZonated ? MC_liv_pericentral : 0)+MC_lng+MC_mus+MC_pan+MC_skn+MC_sin+MC_spl+MC_sto+MC_duo+MC_uje+MC_lje+MC_uil+MC_lil+MC_cae+MC_colasc+MC_coltrans+MC_coldesc+MC_colsigm+MC_rect)">
+        <Paths>
+          <Path path="119" as="1" dim="2" />
+          <Path path="120" as="4" dim="2" />
+          <Path path="121" as="6" dim="2" />
+          <Path path="122" as="8" dim="2" />
+          <Path path="123" as="10" dim="2" />
+          <Path path="124" as="12" dim="2" />
+          <Path path="125" as="14" dim="2" />
+          <Path path="126" as="16" dim="2" />
+          <Path path="127" as="18" dim="2" />
+          <Path path="128" as="20" dim="2" />
+          <Path path="129" as="22" dim="2" />
+          <Path path="130" as="24" dim="2" />
+          <Path path="131" as="26" dim="2" />
+          <Path path="132" as="28" dim="2" />
+          <Path path="133" as="30" dim="2" />
+          <Path path="134" as="32" dim="2" />
+          <Path path="135" as="34" dim="2" />
+          <Path path="136" as="36" dim="2" />
+          <Path path="137" as="38" dim="2" />
+          <Path path="138" as="40" dim="2" />
+          <Path path="139" as="42" dim="2" />
+          <Path path="140" as="44" dim="2" />
+          <Path path="141" as="46" dim="2" />
+          <Path path="142" as="48" dim="2" />
+          <Path path="143" as="50" dim="2" />
+          <Path path="144" as="52" dim="2" />
+          <Path path="145" as="54" dim="2" />
+          <Path path="146" as="56" dim="57" />
+          <Path path="58" as="59" dim="57" />
+          <Path path="147" as="61" dim="2" />
+          <Path path="148" as="63" dim="2" />
+          <Path path="149" as="65" dim="2" />
+          <Path path="150" as="67" dim="2" />
+          <Path path="151" as="69" dim="2" />
+          <Path path="152" as="71" dim="2" />
+          <Path path="153" as="73" dim="2" />
+          <Path path="154" as="75" dim="2" />
+          <Path path="155" as="77" dim="2" />
+          <Path path="156" as="79" dim="2" />
+          <Path path="157" as="81" dim="2" />
+          <Path path="158" as="83" dim="2" />
+          <Path path="159" as="85" dim="2" />
+          <Path path="160" as="87" dim="2" />
+          <Path path="161" as="89" dim="2" />
+          <Path path="162" as="91" dim="2" />
+          <Path path="163" as="93" dim="2" />
+          <Path path="164" as="95" dim="2" />
+          <Path path="165" as="97" dim="2" />
+          <Path path="166" as="99" dim="2" />
+          <Path path="167" as="101" dim="2" />
+          <Path path="168" as="103" dim="2" />
+          <Path path="169" as="105" dim="2" />
+          <Path path="170" as="107" dim="2" />
+          <Path path="171" as="109" dim="2" />
+          <Path path="172" as="111" dim="2" />
+          <Path path="173" as="113" dim="2" />
+          <Path path="114" as="115" dim="116" />
+          <Path path="117" as="118" />
+        </Paths>
+      </Formula>
+      <Formula id="0v4v_b9PFUaUJew9g9QD6Q" name="FcRn binding drug in plasma" dim="Amount per time" formula="kass_FcRn*FcRn*(M_bon+M_brn+M_fat+M_tes+M_hrt+M_kid+M_lin+M_liv_periportal + (IsLiverZonated ? M_liv_pericentral : 0)+M_lng+M_mus+M_pan+M_skn+M_sin+M_spl+M_sto+M_duo+M_uje+M_lje+M_uil+M_lil+M_cae+M_colasc+M_coltrans+M_coldesc+M_colsigm+M_rect) - Kd_FcRn_drug*kass_FcRn*(MC_bon+MC_brn+MC_fat+MC_tes+MC_hrt+MC_kid+MC_lin+MC_liv_periportal + (IsLiverZonated ? MC_liv_pericentral : 0)+MC_lng+MC_mus+MC_pan+MC_skn+MC_sin+MC_spl+MC_sto+MC_duo+MC_uje+MC_lje+MC_uil+MC_lil+MC_cae+MC_colasc+MC_coltrans+MC_coldesc+MC_colsigm+MC_rect)">
+        <Paths>
+          <Path path="174" as="1" dim="2" />
+          <Path path="175" as="4" dim="2" />
+          <Path path="176" as="6" dim="2" />
+          <Path path="177" as="8" dim="2" />
+          <Path path="178" as="10" dim="2" />
+          <Path path="179" as="12" dim="2" />
+          <Path path="180" as="14" dim="2" />
+          <Path path="181" as="16" dim="2" />
+          <Path path="182" as="18" dim="2" />
+          <Path path="183" as="20" dim="2" />
+          <Path path="184" as="22" dim="2" />
+          <Path path="185" as="24" dim="2" />
+          <Path path="186" as="26" dim="2" />
+          <Path path="187" as="28" dim="2" />
+          <Path path="188" as="30" dim="2" />
+          <Path path="189" as="32" dim="2" />
+          <Path path="190" as="34" dim="2" />
+          <Path path="191" as="36" dim="2" />
+          <Path path="192" as="38" dim="2" />
+          <Path path="193" as="40" dim="2" />
+          <Path path="194" as="42" dim="2" />
+          <Path path="195" as="44" dim="2" />
+          <Path path="196" as="46" dim="2" />
+          <Path path="197" as="48" dim="2" />
+          <Path path="198" as="50" dim="2" />
+          <Path path="199" as="52" dim="2" />
+          <Path path="200" as="54" dim="2" />
+          <Path path="146" as="56" dim="57" />
+          <Path path="58" as="59" dim="57" />
+          <Path path="201" as="61" dim="2" />
+          <Path path="202" as="63" dim="2" />
+          <Path path="203" as="65" dim="2" />
+          <Path path="204" as="67" dim="2" />
+          <Path path="205" as="69" dim="2" />
+          <Path path="206" as="71" dim="2" />
+          <Path path="207" as="73" dim="2" />
+          <Path path="208" as="75" dim="2" />
+          <Path path="209" as="77" dim="2" />
+          <Path path="210" as="79" dim="2" />
+          <Path path="211" as="81" dim="2" />
+          <Path path="212" as="83" dim="2" />
+          <Path path="213" as="85" dim="2" />
+          <Path path="214" as="87" dim="2" />
+          <Path path="215" as="89" dim="2" />
+          <Path path="216" as="91" dim="2" />
+          <Path path="217" as="93" dim="2" />
+          <Path path="218" as="95" dim="2" />
+          <Path path="219" as="97" dim="2" />
+          <Path path="220" as="99" dim="2" />
+          <Path path="221" as="101" dim="2" />
+          <Path path="222" as="103" dim="2" />
+          <Path path="223" as="105" dim="2" />
+          <Path path="224" as="107" dim="2" />
+          <Path path="225" as="109" dim="2" />
+          <Path path="226" as="111" dim="2" />
+          <Path path="227" as="113" dim="2" />
+          <Path path="114" as="115" dim="116" />
+          <Path path="117" as="118" />
+        </Paths>
+      </Formula>
+      <Formula id="UKRcJ6qauEqDpro-W3IiMg" name="FcRn binding endogenous Igg" dim="Amount per time" formula="kass_FcRn*FcRn*LigandEndo - Kd_FcRn_IgGendo*kass_FcRn*IgG_endo_FcRn">
+        <Paths>
+          <Path path="228" as="229" dim="57" />
+          <Path path="230" as="59" dim="2" />
+          <Path path="231" as="232" dim="57" />
+          <Path path="233" as="234" dim="2" />
+          <Path path="114" as="115" dim="116" />
+        </Paths>
+      </Formula>
+      <Formula id="aP1TgbOF5EeZKFSz73Tdcg" name="FcRn binding tissue" dim="Amount per time" formula="kass_FcRn * drug * FcRn - Kd_FcRn_drug * kass_FcRn * drug_FcRn">
+        <Paths>
+          <Path path="235" as="59" dim="57" />
+          <Path path="236" as="237" dim="2" />
+          <Path path="238" as="115" dim="116" />
+          <Path path="239" as="56" dim="57" />
+          <Path path="240" as="241" dim="2" />
+        </Paths>
+      </Formula>
+      <Formula id="9L9Kjy0ZDUSIyiRMVyd6VA" name="ADC-TMEFF2-Boswell et al-SpecificBinding" dim="Amount per time" formula="k_off / kd * Protein * C - k_off * Complex">
+        <Paths>
+          <Path path="242" as="243" dim="2" />
+          <Path path="244" as="245" dim="2" />
+          <Path path="246" as="247" dim="57" />
+          <Path path="248" as="249" dim="57" />
+          <Path path="250" as="251" dim="252" />
+        </Paths>
+      </Formula>
+      <Formula id="tcCcV7Z23UevJU_t8T59Qw" name="FcRn binding drug in endosomal space 1" dim="Amount per time" formula="kass_FcRn*FcRn*(M_bon+M_brn+M_fat+M_tes+M_hrt+M_kid+M_lin+M_liv_periportal + (IsLiverZonated ? M_liv_pericentral : 0)+M_lng+M_mus+M_pan+M_skn+M_sin+M_spl+M_sto+M_duo+M_uje+M_lje+M_uil+M_lil+M_cae+M_colasc+M_coltrans+M_coldesc+M_colsigm+M_rect) - Kd_FcRn_drug*kass_FcRn*(MC_bon+MC_brn+MC_fat+MC_tes+MC_hrt+MC_kid+MC_lin+MC_liv_periportal + (IsLiverZonated ? MC_liv_pericentral : 0)+MC_lng+MC_mus+MC_pan+MC_skn+MC_sin+MC_spl+MC_sto+MC_duo+MC_uje+MC_lje+MC_uil+MC_lil+MC_cae+MC_colasc+MC_coltrans+MC_coldesc+MC_colsigm+MC_rect)">
+        <Paths>
+          <Path path="253" as="1" dim="2" />
+          <Path path="254" as="4" dim="2" />
+          <Path path="255" as="6" dim="2" />
+          <Path path="256" as="8" dim="2" />
+          <Path path="257" as="10" dim="2" />
+          <Path path="258" as="12" dim="2" />
+          <Path path="259" as="14" dim="2" />
+          <Path path="260" as="16" dim="2" />
+          <Path path="261" as="18" dim="2" />
+          <Path path="262" as="20" dim="2" />
+          <Path path="263" as="22" dim="2" />
+          <Path path="264" as="24" dim="2" />
+          <Path path="265" as="26" dim="2" />
+          <Path path="266" as="28" dim="2" />
+          <Path path="267" as="30" dim="2" />
+          <Path path="268" as="32" dim="2" />
+          <Path path="269" as="34" dim="2" />
+          <Path path="270" as="36" dim="2" />
+          <Path path="271" as="38" dim="2" />
+          <Path path="272" as="40" dim="2" />
+          <Path path="273" as="42" dim="2" />
+          <Path path="274" as="44" dim="2" />
+          <Path path="275" as="46" dim="2" />
+          <Path path="276" as="48" dim="2" />
+          <Path path="277" as="50" dim="2" />
+          <Path path="278" as="52" dim="2" />
+          <Path path="279" as="54" dim="2" />
+          <Path path="280" as="56" dim="57" />
+          <Path path="58" as="59" dim="57" />
+          <Path path="281" as="61" dim="2" />
+          <Path path="282" as="63" dim="2" />
+          <Path path="283" as="65" dim="2" />
+          <Path path="284" as="67" dim="2" />
+          <Path path="285" as="69" dim="2" />
+          <Path path="286" as="71" dim="2" />
+          <Path path="287" as="73" dim="2" />
+          <Path path="288" as="75" dim="2" />
+          <Path path="289" as="77" dim="2" />
+          <Path path="290" as="79" dim="2" />
+          <Path path="291" as="81" dim="2" />
+          <Path path="292" as="83" dim="2" />
+          <Path path="293" as="85" dim="2" />
+          <Path path="294" as="87" dim="2" />
+          <Path path="295" as="89" dim="2" />
+          <Path path="296" as="91" dim="2" />
+          <Path path="297" as="93" dim="2" />
+          <Path path="298" as="95" dim="2" />
+          <Path path="299" as="97" dim="2" />
+          <Path path="300" as="99" dim="2" />
+          <Path path="301" as="101" dim="2" />
+          <Path path="302" as="103" dim="2" />
+          <Path path="303" as="105" dim="2" />
+          <Path path="304" as="107" dim="2" />
+          <Path path="305" as="109" dim="2" />
+          <Path path="306" as="111" dim="2" />
+          <Path path="307" as="113" dim="2" />
+          <Path path="114" as="115" dim="116" />
+          <Path path="117" as="118" />
+        </Paths>
+      </Formula>
+      <Formula id="-izS5xN580amG4d8Pe4hKQ" name="FcRn binding drug in interstitial 1" dim="Amount per time" formula="kass_FcRn*FcRn*(M_bon+M_brn+M_fat+M_tes+M_hrt+M_kid+M_lin+M_liv_periportal + (IsLiverZonated ? M_liv_pericentral : 0)+M_lng+M_mus+M_pan+M_skn+M_sin+M_spl+M_sto+M_duo+M_uje+M_lje+M_uil+M_lil+M_cae+M_colasc+M_coltrans+M_coldesc+M_colsigm+M_rect) - Kd_FcRn_drug*kass_FcRn*(MC_bon+MC_brn+MC_fat+MC_tes+MC_hrt+MC_kid+MC_lin+MC_liv_periportal + (IsLiverZonated ? MC_liv_pericentral : 0)+MC_lng+MC_mus+MC_pan+MC_skn+MC_sin+MC_spl+MC_sto+MC_duo+MC_uje+MC_lje+MC_uil+MC_lil+MC_cae+MC_colasc+MC_coltrans+MC_coldesc+MC_colsigm+MC_rect)">
+        <Paths>
+          <Path path="308" as="1" dim="2" />
+          <Path path="309" as="4" dim="2" />
+          <Path path="310" as="6" dim="2" />
+          <Path path="311" as="8" dim="2" />
+          <Path path="312" as="10" dim="2" />
+          <Path path="313" as="12" dim="2" />
+          <Path path="314" as="14" dim="2" />
+          <Path path="315" as="16" dim="2" />
+          <Path path="316" as="18" dim="2" />
+          <Path path="317" as="20" dim="2" />
+          <Path path="318" as="22" dim="2" />
+          <Path path="319" as="24" dim="2" />
+          <Path path="320" as="26" dim="2" />
+          <Path path="321" as="28" dim="2" />
+          <Path path="322" as="30" dim="2" />
+          <Path path="323" as="32" dim="2" />
+          <Path path="324" as="34" dim="2" />
+          <Path path="325" as="36" dim="2" />
+          <Path path="326" as="38" dim="2" />
+          <Path path="327" as="40" dim="2" />
+          <Path path="328" as="42" dim="2" />
+          <Path path="329" as="44" dim="2" />
+          <Path path="330" as="46" dim="2" />
+          <Path path="331" as="48" dim="2" />
+          <Path path="332" as="50" dim="2" />
+          <Path path="333" as="52" dim="2" />
+          <Path path="334" as="54" dim="2" />
+          <Path path="335" as="56" dim="57" />
+          <Path path="58" as="59" dim="57" />
+          <Path path="336" as="61" dim="2" />
+          <Path path="337" as="63" dim="2" />
+          <Path path="338" as="65" dim="2" />
+          <Path path="339" as="67" dim="2" />
+          <Path path="340" as="69" dim="2" />
+          <Path path="341" as="71" dim="2" />
+          <Path path="342" as="73" dim="2" />
+          <Path path="343" as="75" dim="2" />
+          <Path path="344" as="77" dim="2" />
+          <Path path="345" as="79" dim="2" />
+          <Path path="346" as="81" dim="2" />
+          <Path path="347" as="83" dim="2" />
+          <Path path="348" as="85" dim="2" />
+          <Path path="349" as="87" dim="2" />
+          <Path path="350" as="89" dim="2" />
+          <Path path="351" as="91" dim="2" />
+          <Path path="352" as="93" dim="2" />
+          <Path path="353" as="95" dim="2" />
+          <Path path="354" as="97" dim="2" />
+          <Path path="355" as="99" dim="2" />
+          <Path path="356" as="101" dim="2" />
+          <Path path="357" as="103" dim="2" />
+          <Path path="358" as="105" dim="2" />
+          <Path path="359" as="107" dim="2" />
+          <Path path="360" as="109" dim="2" />
+          <Path path="361" as="111" dim="2" />
+          <Path path="362" as="113" dim="2" />
+          <Path path="114" as="115" dim="116" />
+          <Path path="117" as="118" />
+        </Paths>
+      </Formula>
+      <Formula id="VFbIXLg3eUyf-9f4Q7qBpw" name="FcRn binding drug in plasma 1" dim="Amount per time" formula="kass_FcRn*FcRn*(M_bon+M_brn+M_fat+M_tes+M_hrt+M_kid+M_lin+M_liv_periportal + (IsLiverZonated ? M_liv_pericentral : 0)+M_lng+M_mus+M_pan+M_skn+M_sin+M_spl+M_sto+M_duo+M_uje+M_lje+M_uil+M_lil+M_cae+M_colasc+M_coltrans+M_coldesc+M_colsigm+M_rect) - Kd_FcRn_drug*kass_FcRn*(MC_bon+MC_brn+MC_fat+MC_tes+MC_hrt+MC_kid+MC_lin+MC_liv_periportal + (IsLiverZonated ? MC_liv_pericentral : 0)+MC_lng+MC_mus+MC_pan+MC_skn+MC_sin+MC_spl+MC_sto+MC_duo+MC_uje+MC_lje+MC_uil+MC_lil+MC_cae+MC_colasc+MC_coltrans+MC_coldesc+MC_colsigm+MC_rect)">
+        <Paths>
+          <Path path="363" as="1" dim="2" />
+          <Path path="364" as="4" dim="2" />
+          <Path path="365" as="6" dim="2" />
+          <Path path="366" as="8" dim="2" />
+          <Path path="367" as="10" dim="2" />
+          <Path path="368" as="12" dim="2" />
+          <Path path="369" as="14" dim="2" />
+          <Path path="370" as="16" dim="2" />
+          <Path path="371" as="18" dim="2" />
+          <Path path="372" as="20" dim="2" />
+          <Path path="373" as="22" dim="2" />
+          <Path path="374" as="24" dim="2" />
+          <Path path="375" as="26" dim="2" />
+          <Path path="376" as="28" dim="2" />
+          <Path path="377" as="30" dim="2" />
+          <Path path="378" as="32" dim="2" />
+          <Path path="379" as="34" dim="2" />
+          <Path path="380" as="36" dim="2" />
+          <Path path="381" as="38" dim="2" />
+          <Path path="382" as="40" dim="2" />
+          <Path path="383" as="42" dim="2" />
+          <Path path="384" as="44" dim="2" />
+          <Path path="385" as="46" dim="2" />
+          <Path path="386" as="48" dim="2" />
+          <Path path="387" as="50" dim="2" />
+          <Path path="388" as="52" dim="2" />
+          <Path path="389" as="54" dim="2" />
+          <Path path="335" as="56" dim="57" />
+          <Path path="58" as="59" dim="57" />
+          <Path path="390" as="61" dim="2" />
+          <Path path="391" as="63" dim="2" />
+          <Path path="392" as="65" dim="2" />
+          <Path path="393" as="67" dim="2" />
+          <Path path="394" as="69" dim="2" />
+          <Path path="395" as="71" dim="2" />
+          <Path path="396" as="73" dim="2" />
+          <Path path="397" as="75" dim="2" />
+          <Path path="398" as="77" dim="2" />
+          <Path path="399" as="79" dim="2" />
+          <Path path="400" as="81" dim="2" />
+          <Path path="401" as="83" dim="2" />
+          <Path path="402" as="85" dim="2" />
+          <Path path="403" as="87" dim="2" />
+          <Path path="404" as="89" dim="2" />
+          <Path path="405" as="91" dim="2" />
+          <Path path="406" as="93" dim="2" />
+          <Path path="407" as="95" dim="2" />
+          <Path path="408" as="97" dim="2" />
+          <Path path="409" as="99" dim="2" />
+          <Path path="410" as="101" dim="2" />
+          <Path path="411" as="103" dim="2" />
+          <Path path="412" as="105" dim="2" />
+          <Path path="413" as="107" dim="2" />
+          <Path path="414" as="109" dim="2" />
+          <Path path="415" as="111" dim="2" />
+          <Path path="416" as="113" dim="2" />
+          <Path path="114" as="115" dim="116" />
+          <Path path="117" as="118" />
+        </Paths>
+      </Formula>
+      <Formula id="nVG9bPc7zUGqXWNlZn1RPg" name="FcRn binding tissue 1" dim="Amount per time" formula="kass_FcRn * drug * FcRn - Kd_FcRn_drug * kass_FcRn * drug_FcRn">
+        <Paths>
+          <Path path="235" as="59" dim="57" />
+          <Path path="417" as="237" dim="2" />
+          <Path path="418" as="115" dim="116" />
+          <Path path="419" as="56" dim="57" />
+          <Path path="420" as="241" dim="2" />
+        </Paths>
+      </Formula>
+      <Formula id="-UEOLGwWLE2Pc_SQ5_Si-w" name="PARAM_KProt" formula="(0.81 + 0.11 * 10^LogMA) / 24.92 * 5.0">
+        <Paths>
+          <Path path="421" as="422" dim="423" />
+        </Paths>
+      </Formula>
+      <Formula id="_3RJ9ZCecEKXK7YVpwToqQ" name="PARAM_Blood2Plasma" formula="(f_water_rbc + f_lipids_rbc * 10^LogP + f_proteins_rbc * KProt) * fu * HCT - HCT + 1">
+        <Paths>
+          <Path path="424" as="425" dim="426" />
+          <Path path="427" as="428" />
+          <Path path="421" as="429" dim="423" />
+          <Path path="430" as="431" />
+          <Path path="432" as="433" />
+          <Path path="434" as="435" />
+          <Path path="436" as="437" />
+        </Paths>
+      </Formula>
+      <Formula id="GA7W55yRjU-oZTAYgA-FpQ" name="PARAM_SpecificHepaticClearance" dim="Inversed time" formula="(Q_liv+Q_pve - CL_pls / B2P* BW &gt;0)  ? CL_pls * BW * (Q_liv+Q_pve) / (fu  * (Q_liv+Q_pve - CL_pls / B2P* BW) * V * f_cell) : 1000000">
+        <Paths>
+          <Path path="438" as="439" dim="440" />
+          <Path path="441" as="442" dim="440" />
+          <Path path="443" as="444" />
+          <Path path="445" as="446" dim="447" />
+          <Path path="448" as="449" />
+          <Path path="424" as="425" dim="426" />
+          <Path path="450" as="451" dim="452" />
+          <Path path="453" as="454" dim="455" />
+        </Paths>
+      </Formula>
+      <Formula id="-ULDmbYhfkCNExVwo5Eh2A" name="Toxophore-Total Hepatic Clearance-Literature-SystemicLiverClearance" dim="Amount per time" formula="f_cell * V * CLspec * C_cell * K_water_cell">
+        <Paths>
+          <Path path="456" as="457" dim="57" />
+          <Path path="458" as="459" dim="252" />
+          <Path path="460" as="449" />
+          <Path path="461" as="454" dim="455" />
+          <Path path="462" as="463" />
+        </Paths>
+      </Formula>
+      <Formula id="775acb03-8faf-493b-ac7a-204ab7f9900d" name="degradation" dim="Amount per time" formula="k_deg * TMEFF2">
+        <Paths>
+          <Path path="464" as="465" />
+          <Path path="466" as="467" dim="426" />
+          <Path path="468" as="469" dim="57" />
+          <Path path="470" as="471" dim="252" />
+          <Path path="472" as="473" dim="57" />
+          <Path path="474" as="455" dim="455" />
+          <Path path="242" as="475" dim="2" />
+        </Paths>
+      </Formula>
+      <Formula id="c7af027d-d0c1-4cbe-8c7e-25fc57173dce" name="formula_internalization" dim="Amount per time" formula="k_int*ADC_TMEFF2_Complex">
+        <Paths>
+          <Path path="476" as="473" dim="57" />
+          <Path path="477" as="478" dim="252" />
+          <Path path="479" as="480" dim="2" />
+          <Path path="481" as="482" dim="2" />
+          <Path path="244" as="483" dim="2" />
+        </Paths>
+      </Formula>
+      <Formula id="eda8930c-14a2-4440-8de5-3ed2779cf20c" name="formula_internalization_cell" dim="Amount per time" formula="k_int*ADC_TMEFF2_Complex">
+        <Paths>
+          <Path path="477" as="478" dim="252" />
+          <Path path="484" as="483" dim="2" />
+          <Path path="485" as="486" dim="2" />
+          <Path path="417" as="487" dim="2" />
+        </Paths>
+      </Formula>
+      <Formula id="d4aa166e-d22b-454a-bb5b-49134ad0ac2c" name="synthesis" dim="Amount per time" formula=" syn_fac * k_deg*Relative_expression_out*Reference_concentration*Ontogeny_factor * Volume">
+        <Paths>
+          <Path path="470" as="471" dim="252" />
+          <Path path="468" as="469" dim="57" />
+          <Path path="464" as="465" />
+          <Path path="466" as="467" dim="426" />
+          <Path path="488" as="489" />
+          <Path path="474" as="455" dim="455" />
+          <Path path="242" as="475" dim="2" />
+        </Paths>
+      </Formula>
+    </Formulas>
+    <StringMap>
+      <Map s="Organism|Bone|Endosome|ADC" id="0" />
+      <Map s="M_bon" id="1" />
+      <Map s="Amount" id="2" />
+      <Map s="Organism|Brain|Endosome|ADC" id="3" />
+      <Map s="M_brn" id="4" />
+      <Map s="Organism|LargeIntestine|Mucosa|Caecum|Endosome|ADC" id="5" />
+      <Map s="M_cae" id="6" />
+      <Map s="Organism|LargeIntestine|Mucosa|ColonAscendens|Endosome|ADC" id="7" />
+      <Map s="M_colasc" id="8" />
+      <Map s="Organism|LargeIntestine|Mucosa|ColonDescendens|Endosome|ADC" id="9" />
+      <Map s="M_coldesc" id="10" />
+      <Map s="Organism|LargeIntestine|Mucosa|ColonSigmoid|Endosome|ADC" id="11" />
+      <Map s="M_colsigm" id="12" />
+      <Map s="Organism|LargeIntestine|Mucosa|ColonTransversum|Endosome|ADC" id="13" />
+      <Map s="M_coltrans" id="14" />
+      <Map s="Organism|SmallIntestine|Mucosa|Duodenum|Endosome|ADC" id="15" />
+      <Map s="M_duo" id="16" />
+      <Map s="Organism|Fat|Endosome|ADC" id="17" />
+      <Map s="M_fat" id="18" />
+      <Map s="Organism|Heart|Endosome|ADC" id="19" />
+      <Map s="M_hrt" id="20" />
+      <Map s="Organism|Kidney|Endosome|ADC" id="21" />
+      <Map s="M_kid" id="22" />
+      <Map s="Organism|SmallIntestine|Mucosa|LowerIleum|Endosome|ADC" id="23" />
+      <Map s="M_lil" id="24" />
+      <Map s="Organism|LargeIntestine|Endosome|ADC" id="25" />
+      <Map s="M_lin" id="26" />
+      <Map s="Organism|Liver|Pericentral|Endosome|ADC" id="27" />
+      <Map s="M_liv_pericentral" id="28" />
+      <Map s="Organism|Liver|Periportal|Endosome|ADC" id="29" />
+      <Map s="M_liv_periportal" id="30" />
+      <Map s="Organism|SmallIntestine|Mucosa|LowerJejunum|Endosome|ADC" id="31" />
+      <Map s="M_lje" id="32" />
+      <Map s="Organism|Lung|Endosome|ADC" id="33" />
+      <Map s="M_lng" id="34" />
+      <Map s="Organism|Muscle|Endosome|ADC" id="35" />
+      <Map s="M_mus" id="36" />
+      <Map s="Organism|Pancreas|Endosome|ADC" id="37" />
+      <Map s="M_pan" id="38" />
+      <Map s="Organism|LargeIntestine|Mucosa|Rectum|Endosome|ADC" id="39" />
+      <Map s="M_rect" id="40" />
+      <Map s="Organism|SmallIntestine|Endosome|ADC" id="41" />
+      <Map s="M_sin" id="42" />
+      <Map s="Organism|Skin|Endosome|ADC" id="43" />
+      <Map s="M_skn" id="44" />
+      <Map s="Organism|Spleen|Endosome|ADC" id="45" />
+      <Map s="M_spl" id="46" />
+      <Map s="Organism|Stomach|Endosome|ADC" id="47" />
+      <Map s="M_sto" id="48" />
+      <Map s="Organism|Gonads|Endosome|ADC" id="49" />
+      <Map s="M_tes" id="50" />
+      <Map s="Organism|SmallIntestine|Mucosa|UpperIleum|Endosome|ADC" id="51" />
+      <Map s="M_uil" id="52" />
+      <Map s="Organism|SmallIntestine|Mucosa|UpperJejunum|Endosome|ADC" id="53" />
+      <Map s="M_uje" id="54" />
+      <Map s="ADC|Kd (FcRn) in endosomal space" id="55" />
+      <Map s="Kd_FcRn_drug" id="56" />
+      <Map s="Concentration (molar)" id="57" />
+      <Map s="..|FcRn|Concentration" id="58" />
+      <Map s="FcRn" id="59" />
+      <Map s="Organism|Bone|Endosome|ADC-FcRn_Complex" id="60" />
+      <Map s="MC_bon" id="61" />
+      <Map s="Organism|Brain|Endosome|ADC-FcRn_Complex" id="62" />
+      <Map s="MC_brn" id="63" />
+      <Map s="Organism|LargeIntestine|Mucosa|Caecum|Endosome|ADC-FcRn_Complex" id="64" />
+      <Map s="MC_cae" id="65" />
+      <Map s="Organism|LargeIntestine|Mucosa|ColonAscendens|Endosome|ADC-FcRn_Complex" id="66" />
+      <Map s="MC_colasc" id="67" />
+      <Map s="Organism|LargeIntestine|Mucosa|ColonDescendens|Endosome|ADC-FcRn_Complex" id="68" />
+      <Map s="MC_coldesc" id="69" />
+      <Map s="Organism|LargeIntestine|Mucosa|ColonSigmoid|Endosome|ADC-FcRn_Complex" id="70" />
+      <Map s="MC_colsigm" id="71" />
+      <Map s="Organism|LargeIntestine|Mucosa|ColonTransversum|Endosome|ADC-FcRn_Complex" id="72" />
+      <Map s="MC_coltrans" id="73" />
+      <Map s="Organism|SmallIntestine|Mucosa|Duodenum|Endosome|ADC-FcRn_Complex" id="74" />
+      <Map s="MC_duo" id="75" />
+      <Map s="Organism|Fat|Endosome|ADC-FcRn_Complex" id="76" />
+      <Map s="MC_fat" id="77" />
+      <Map s="Organism|Heart|Endosome|ADC-FcRn_Complex" id="78" />
+      <Map s="MC_hrt" id="79" />
+      <Map s="Organism|Kidney|Endosome|ADC-FcRn_Complex" id="80" />
+      <Map s="MC_kid" id="81" />
+      <Map s="Organism|SmallIntestine|Mucosa|LowerIleum|Endosome|ADC-FcRn_Complex" id="82" />
+      <Map s="MC_lil" id="83" />
+      <Map s="Organism|LargeIntestine|Endosome|ADC-FcRn_Complex" id="84" />
+      <Map s="MC_lin" id="85" />
+      <Map s="Organism|Liver|Pericentral|Endosome|ADC-FcRn_Complex" id="86" />
+      <Map s="MC_liv_pericentral" id="87" />
+      <Map s="Organism|Liver|Periportal|Endosome|ADC-FcRn_Complex" id="88" />
+      <Map s="MC_liv_periportal" id="89" />
+      <Map s="Organism|SmallIntestine|Mucosa|LowerJejunum|Endosome|ADC-FcRn_Complex" id="90" />
+      <Map s="MC_lje" id="91" />
+      <Map s="Organism|Lung|Endosome|ADC-FcRn_Complex" id="92" />
+      <Map s="MC_lng" id="93" />
+      <Map s="Organism|Muscle|Endosome|ADC-FcRn_Complex" id="94" />
+      <Map s="MC_mus" id="95" />
+      <Map s="Organism|Pancreas|Endosome|ADC-FcRn_Complex" id="96" />
+      <Map s="MC_pan" id="97" />
+      <Map s="Organism|LargeIntestine|Mucosa|Rectum|Endosome|ADC-FcRn_Complex" id="98" />
+      <Map s="MC_rect" id="99" />
+      <Map s="Organism|SmallIntestine|Endosome|ADC-FcRn_Complex" id="100" />
+      <Map s="MC_sin" id="101" />
+      <Map s="Organism|Skin|Endosome|ADC-FcRn_Complex" id="102" />
+      <Map s="MC_skn" id="103" />
+      <Map s="Organism|Spleen|Endosome|ADC-FcRn_Complex" id="104" />
+      <Map s="MC_spl" id="105" />
+      <Map s="Organism|Stomach|Endosome|ADC-FcRn_Complex" id="106" />
+      <Map s="MC_sto" id="107" />
+      <Map s="Organism|Gonads|Endosome|ADC-FcRn_Complex" id="108" />
+      <Map s="MC_tes" id="109" />
+      <Map s="Organism|SmallIntestine|Mucosa|UpperIleum|Endosome|ADC-FcRn_Complex" id="110" />
+      <Map s="MC_uil" id="111" />
+      <Map s="Organism|SmallIntestine|Mucosa|UpperJejunum|Endosome|ADC-FcRn_Complex" id="112" />
+      <Map s="MC_uje" id="113" />
+      <Map s="..|..|kass (FcRn, endogenous IgG)" id="114" />
+      <Map s="kass_FcRn" id="115" />
+      <Map s="Second order rate constant" id="116" />
+      <Map s="Organism|Liver|Is liver zonated" id="117" />
+      <Map s="IsLiverZonated" id="118" />
+      <Map s="Organism|Bone|Interstitial|ADC" id="119" />
+      <Map s="Organism|Brain|Interstitial|ADC" id="120" />
+      <Map s="Organism|LargeIntestine|Mucosa|Caecum|Interstitial|ADC" id="121" />
+      <Map s="Organism|LargeIntestine|Mucosa|ColonAscendens|Interstitial|ADC" id="122" />
+      <Map s="Organism|LargeIntestine|Mucosa|ColonDescendens|Interstitial|ADC" id="123" />
+      <Map s="Organism|LargeIntestine|Mucosa|ColonSigmoid|Interstitial|ADC" id="124" />
+      <Map s="Organism|LargeIntestine|Mucosa|ColonTransversum|Interstitial|ADC" id="125" />
+      <Map s="Organism|SmallIntestine|Mucosa|Duodenum|Interstitial|ADC" id="126" />
+      <Map s="Organism|Fat|Interstitial|ADC" id="127" />
+      <Map s="Organism|Heart|Interstitial|ADC" id="128" />
+      <Map s="Organism|Kidney|Interstitial|ADC" id="129" />
+      <Map s="Organism|SmallIntestine|Mucosa|LowerIleum|Interstitial|ADC" id="130" />
+      <Map s="Organism|LargeIntestine|Interstitial|ADC" id="131" />
+      <Map s="Organism|Liver|Pericentral|Interstitial|ADC" id="132" />
+      <Map s="Organism|Liver|Periportal|Interstitial|ADC" id="133" />
+      <Map s="Organism|SmallIntestine|Mucosa|LowerJejunum|Interstitial|ADC" id="134" />
+      <Map s="Organism|Lung|Interstitial|ADC" id="135" />
+      <Map s="Organism|Muscle|Interstitial|ADC" id="136" />
+      <Map s="Organism|Pancreas|Interstitial|ADC" id="137" />
+      <Map s="Organism|LargeIntestine|Mucosa|Rectum|Interstitial|ADC" id="138" />
+      <Map s="Organism|SmallIntestine|Interstitial|ADC" id="139" />
+      <Map s="Organism|Skin|Interstitial|ADC" id="140" />
+      <Map s="Organism|Spleen|Interstitial|ADC" id="141" />
+      <Map s="Organism|Stomach|Interstitial|ADC" id="142" />
+      <Map s="Organism|Gonads|Interstitial|ADC" id="143" />
+      <Map s="Organism|SmallIntestine|Mucosa|UpperIleum|Interstitial|ADC" id="144" />
+      <Map s="Organism|SmallIntestine|Mucosa|UpperJejunum|Interstitial|ADC" id="145" />
+      <Map s="ADC|Kd (FcRn) in plasma/interstitial" id="146" />
+      <Map s="Organism|Bone|Interstitial|ADC-FcRn_Complex" id="147" />
+      <Map s="Organism|Brain|Interstitial|ADC-FcRn_Complex" id="148" />
+      <Map s="Organism|LargeIntestine|Mucosa|Caecum|Interstitial|ADC-FcRn_Complex" id="149" />
+      <Map s="Organism|LargeIntestine|Mucosa|ColonAscendens|Interstitial|ADC-FcRn_Complex" id="150" />
+      <Map s="Organism|LargeIntestine|Mucosa|ColonDescendens|Interstitial|ADC-FcRn_Complex" id="151" />
+      <Map s="Organism|LargeIntestine|Mucosa|ColonSigmoid|Interstitial|ADC-FcRn_Complex" id="152" />
+      <Map s="Organism|LargeIntestine|Mucosa|ColonTransversum|Interstitial|ADC-FcRn_Complex" id="153" />
+      <Map s="Organism|SmallIntestine|Mucosa|Duodenum|Interstitial|ADC-FcRn_Complex" id="154" />
+      <Map s="Organism|Fat|Interstitial|ADC-FcRn_Complex" id="155" />
+      <Map s="Organism|Heart|Interstitial|ADC-FcRn_Complex" id="156" />
+      <Map s="Organism|Kidney|Interstitial|ADC-FcRn_Complex" id="157" />
+      <Map s="Organism|SmallIntestine|Mucosa|LowerIleum|Interstitial|ADC-FcRn_Complex" id="158" />
+      <Map s="Organism|LargeIntestine|Interstitial|ADC-FcRn_Complex" id="159" />
+      <Map s="Organism|Liver|Pericentral|Interstitial|ADC-FcRn_Complex" id="160" />
+      <Map s="Organism|Liver|Periportal|Interstitial|ADC-FcRn_Complex" id="161" />
+      <Map s="Organism|SmallIntestine|Mucosa|LowerJejunum|Interstitial|ADC-FcRn_Complex" id="162" />
+      <Map s="Organism|Lung|Interstitial|ADC-FcRn_Complex" id="163" />
+      <Map s="Organism|Muscle|Interstitial|ADC-FcRn_Complex" id="164" />
+      <Map s="Organism|Pancreas|Interstitial|ADC-FcRn_Complex" id="165" />
+      <Map s="Organism|LargeIntestine|Mucosa|Rectum|Interstitial|ADC-FcRn_Complex" id="166" />
+      <Map s="Organism|SmallIntestine|Interstitial|ADC-FcRn_Complex" id="167" />
+      <Map s="Organism|Skin|Interstitial|ADC-FcRn_Complex" id="168" />
+      <Map s="Organism|Spleen|Interstitial|ADC-FcRn_Complex" id="169" />
+      <Map s="Organism|Stomach|Interstitial|ADC-FcRn_Complex" id="170" />
+      <Map s="Organism|Gonads|Interstitial|ADC-FcRn_Complex" id="171" />
+      <Map s="Organism|SmallIntestine|Mucosa|UpperIleum|Interstitial|ADC-FcRn_Complex" id="172" />
+      <Map s="Organism|SmallIntestine|Mucosa|UpperJejunum|Interstitial|ADC-FcRn_Complex" id="173" />
+      <Map s="Organism|Bone|Plasma|ADC" id="174" />
+      <Map s="Organism|Brain|Plasma|ADC" id="175" />
+      <Map s="Organism|LargeIntestine|Mucosa|Caecum|Plasma|ADC" id="176" />
+      <Map s="Organism|LargeIntestine|Mucosa|ColonAscendens|Plasma|ADC" id="177" />
+      <Map s="Organism|LargeIntestine|Mucosa|ColonDescendens|Plasma|ADC" id="178" />
+      <Map s="Organism|LargeIntestine|Mucosa|ColonSigmoid|Plasma|ADC" id="179" />
+      <Map s="Organism|LargeIntestine|Mucosa|ColonTransversum|Plasma|ADC" id="180" />
+      <Map s="Organism|SmallIntestine|Mucosa|Duodenum|Plasma|ADC" id="181" />
+      <Map s="Organism|Fat|Plasma|ADC" id="182" />
+      <Map s="Organism|Heart|Plasma|ADC" id="183" />
+      <Map s="Organism|Kidney|Plasma|ADC" id="184" />
+      <Map s="Organism|SmallIntestine|Mucosa|LowerIleum|Plasma|ADC" id="185" />
+      <Map s="Organism|LargeIntestine|Plasma|ADC" id="186" />
+      <Map s="Organism|Liver|Pericentral|Plasma|ADC" id="187" />
+      <Map s="Organism|Liver|Periportal|Plasma|ADC" id="188" />
+      <Map s="Organism|SmallIntestine|Mucosa|LowerJejunum|Plasma|ADC" id="189" />
+      <Map s="Organism|Lung|Plasma|ADC" id="190" />
+      <Map s="Organism|Muscle|Plasma|ADC" id="191" />
+      <Map s="Organism|Pancreas|Plasma|ADC" id="192" />
+      <Map s="Organism|LargeIntestine|Mucosa|Rectum|Plasma|ADC" id="193" />
+      <Map s="Organism|SmallIntestine|Plasma|ADC" id="194" />
+      <Map s="Organism|Skin|Plasma|ADC" id="195" />
+      <Map s="Organism|Spleen|Plasma|ADC" id="196" />
+      <Map s="Organism|Stomach|Plasma|ADC" id="197" />
+      <Map s="Organism|Gonads|Plasma|ADC" id="198" />
+      <Map s="Organism|SmallIntestine|Mucosa|UpperIleum|Plasma|ADC" id="199" />
+      <Map s="Organism|SmallIntestine|Mucosa|UpperJejunum|Plasma|ADC" id="200" />
+      <Map s="Organism|Bone|Plasma|ADC-FcRn_Complex" id="201" />
+      <Map s="Organism|Brain|Plasma|ADC-FcRn_Complex" id="202" />
+      <Map s="Organism|LargeIntestine|Mucosa|Caecum|Plasma|ADC-FcRn_Complex" id="203" />
+      <Map s="Organism|LargeIntestine|Mucosa|ColonAscendens|Plasma|ADC-FcRn_Complex" id="204" />
+      <Map s="Organism|LargeIntestine|Mucosa|ColonDescendens|Plasma|ADC-FcRn_Complex" id="205" />
+      <Map s="Organism|LargeIntestine|Mucosa|ColonSigmoid|Plasma|ADC-FcRn_Complex" id="206" />
+      <Map s="Organism|LargeIntestine|Mucosa|ColonTransversum|Plasma|ADC-FcRn_Complex" id="207" />
+      <Map s="Organism|SmallIntestine|Mucosa|Duodenum|Plasma|ADC-FcRn_Complex" id="208" />
+      <Map s="Organism|Fat|Plasma|ADC-FcRn_Complex" id="209" />
+      <Map s="Organism|Heart|Plasma|ADC-FcRn_Complex" id="210" />
+      <Map s="Organism|Kidney|Plasma|ADC-FcRn_Complex" id="211" />
+      <Map s="Organism|SmallIntestine|Mucosa|LowerIleum|Plasma|ADC-FcRn_Complex" id="212" />
+      <Map s="Organism|LargeIntestine|Plasma|ADC-FcRn_Complex" id="213" />
+      <Map s="Organism|Liver|Pericentral|Plasma|ADC-FcRn_Complex" id="214" />
+      <Map s="Organism|Liver|Periportal|Plasma|ADC-FcRn_Complex" id="215" />
+      <Map s="Organism|SmallIntestine|Mucosa|LowerJejunum|Plasma|ADC-FcRn_Complex" id="216" />
+      <Map s="Organism|Lung|Plasma|ADC-FcRn_Complex" id="217" />
+      <Map s="Organism|Muscle|Plasma|ADC-FcRn_Complex" id="218" />
+      <Map s="Organism|Pancreas|Plasma|ADC-FcRn_Complex" id="219" />
+      <Map s="Organism|LargeIntestine|Mucosa|Rectum|Plasma|ADC-FcRn_Complex" id="220" />
+      <Map s="Organism|SmallIntestine|Plasma|ADC-FcRn_Complex" id="221" />
+      <Map s="Organism|Skin|Plasma|ADC-FcRn_Complex" id="222" />
+      <Map s="Organism|Spleen|Plasma|ADC-FcRn_Complex" id="223" />
+      <Map s="Organism|Stomach|Plasma|ADC-FcRn_Complex" id="224" />
+      <Map s="Organism|Gonads|Plasma|ADC-FcRn_Complex" id="225" />
+      <Map s="Organism|SmallIntestine|Mucosa|UpperIleum|Plasma|ADC-FcRn_Complex" id="226" />
+      <Map s="Organism|SmallIntestine|Mucosa|UpperJejunum|Plasma|ADC-FcRn_Complex" id="227" />
+      <Map s="..|Kd (FcRn, endogenous IgG) in endosomal space of container" id="228" />
+      <Map s="Kd_FcRn_IgGendo" id="229" />
+      <Map s="..|FcRn" id="230" />
+      <Map s="..|LigandEndo|Concentration" id="231" />
+      <Map s="LigandEndo" id="232" />
+      <Map s="..|LigandEndo_Complex" id="233" />
+      <Map s="IgG_endo_FcRn" id="234" />
+      <Map s="..|FcRn concentration in container" id="235" />
+      <Map s="..|ADC" id="236" />
+      <Map s="drug" id="237" />
+      <Map s="ADC|kass (FcRn)" id="238" />
+      <Map s="..|ADC|Kd (FcRn) in endosomal space of container" id="239" />
+      <Map s="..|ADC-FcRn_Complex" id="240" />
+      <Map s="drug_FcRn" id="241" />
+      <Map s="..|TMEFF2" id="242" />
+      <Map s="Protein" id="243" />
+      <Map s="..|ADC-TMEFF2 Complex" id="244" />
+      <Map s="Complex" id="245" />
+      <Map s="..|ADC|Concentration" id="246" />
+      <Map s="C" id="247" />
+      <Map s="ADC-TMEFF2-Boswell et al|Kd" id="248" />
+      <Map s="kd" id="249" />
+      <Map s="ADC-TMEFF2-Boswell et al|koff" id="250" />
+      <Map s="k_off" id="251" />
+      <Map s="Inversed time" id="252" />
+      <Map s="Organism|Bone|Endosome|Toxophore" id="253" />
+      <Map s="Organism|Brain|Endosome|Toxophore" id="254" />
+      <Map s="Organism|LargeIntestine|Mucosa|Caecum|Endosome|Toxophore" id="255" />
+      <Map s="Organism|LargeIntestine|Mucosa|ColonAscendens|Endosome|Toxophore" id="256" />
+      <Map s="Organism|LargeIntestine|Mucosa|ColonDescendens|Endosome|Toxophore" id="257" />
+      <Map s="Organism|LargeIntestine|Mucosa|ColonSigmoid|Endosome|Toxophore" id="258" />
+      <Map s="Organism|LargeIntestine|Mucosa|ColonTransversum|Endosome|Toxophore" id="259" />
+      <Map s="Organism|SmallIntestine|Mucosa|Duodenum|Endosome|Toxophore" id="260" />
+      <Map s="Organism|Fat|Endosome|Toxophore" id="261" />
+      <Map s="Organism|Heart|Endosome|Toxophore" id="262" />
+      <Map s="Organism|Kidney|Endosome|Toxophore" id="263" />
+      <Map s="Organism|SmallIntestine|Mucosa|LowerIleum|Endosome|Toxophore" id="264" />
+      <Map s="Organism|LargeIntestine|Endosome|Toxophore" id="265" />
+      <Map s="Organism|Liver|Pericentral|Endosome|Toxophore" id="266" />
+      <Map s="Organism|Liver|Periportal|Endosome|Toxophore" id="267" />
+      <Map s="Organism|SmallIntestine|Mucosa|LowerJejunum|Endosome|Toxophore" id="268" />
+      <Map s="Organism|Lung|Endosome|Toxophore" id="269" />
+      <Map s="Organism|Muscle|Endosome|Toxophore" id="270" />
+      <Map s="Organism|Pancreas|Endosome|Toxophore" id="271" />
+      <Map s="Organism|LargeIntestine|Mucosa|Rectum|Endosome|Toxophore" id="272" />
+      <Map s="Organism|SmallIntestine|Endosome|Toxophore" id="273" />
+      <Map s="Organism|Skin|Endosome|Toxophore" id="274" />
+      <Map s="Organism|Spleen|Endosome|Toxophore" id="275" />
+      <Map s="Organism|Stomach|Endosome|Toxophore" id="276" />
+      <Map s="Organism|Gonads|Endosome|Toxophore" id="277" />
+      <Map s="Organism|SmallIntestine|Mucosa|UpperIleum|Endosome|Toxophore" id="278" />
+      <Map s="Organism|SmallIntestine|Mucosa|UpperJejunum|Endosome|Toxophore" id="279" />
+      <Map s="Toxophore|Kd (FcRn) in endosomal space" id="280" />
+      <Map s="Organism|Bone|Endosome|Toxophore-FcRn_Complex" id="281" />
+      <Map s="Organism|Brain|Endosome|Toxophore-FcRn_Complex" id="282" />
+      <Map s="Organism|LargeIntestine|Mucosa|Caecum|Endosome|Toxophore-FcRn_Complex" id="283" />
+      <Map s="Organism|LargeIntestine|Mucosa|ColonAscendens|Endosome|Toxophore-FcRn_Complex" id="284" />
+      <Map s="Organism|LargeIntestine|Mucosa|ColonDescendens|Endosome|Toxophore-FcRn_Complex" id="285" />
+      <Map s="Organism|LargeIntestine|Mucosa|ColonSigmoid|Endosome|Toxophore-FcRn_Complex" id="286" />
+      <Map s="Organism|LargeIntestine|Mucosa|ColonTransversum|Endosome|Toxophore-FcRn_Complex" id="287" />
+      <Map s="Organism|SmallIntestine|Mucosa|Duodenum|Endosome|Toxophore-FcRn_Complex" id="288" />
+      <Map s="Organism|Fat|Endosome|Toxophore-FcRn_Complex" id="289" />
+      <Map s="Organism|Heart|Endosome|Toxophore-FcRn_Complex" id="290" />
+      <Map s="Organism|Kidney|Endosome|Toxophore-FcRn_Complex" id="291" />
+      <Map s="Organism|SmallIntestine|Mucosa|LowerIleum|Endosome|Toxophore-FcRn_Complex" id="292" />
+      <Map s="Organism|LargeIntestine|Endosome|Toxophore-FcRn_Complex" id="293" />
+      <Map s="Organism|Liver|Pericentral|Endosome|Toxophore-FcRn_Complex" id="294" />
+      <Map s="Organism|Liver|Periportal|Endosome|Toxophore-FcRn_Complex" id="295" />
+      <Map s="Organism|SmallIntestine|Mucosa|LowerJejunum|Endosome|Toxophore-FcRn_Complex" id="296" />
+      <Map s="Organism|Lung|Endosome|Toxophore-FcRn_Complex" id="297" />
+      <Map s="Organism|Muscle|Endosome|Toxophore-FcRn_Complex" id="298" />
+      <Map s="Organism|Pancreas|Endosome|Toxophore-FcRn_Complex" id="299" />
+      <Map s="Organism|LargeIntestine|Mucosa|Rectum|Endosome|Toxophore-FcRn_Complex" id="300" />
+      <Map s="Organism|SmallIntestine|Endosome|Toxophore-FcRn_Complex" id="301" />
+      <Map s="Organism|Skin|Endosome|Toxophore-FcRn_Complex" id="302" />
+      <Map s="Organism|Spleen|Endosome|Toxophore-FcRn_Complex" id="303" />
+      <Map s="Organism|Stomach|Endosome|Toxophore-FcRn_Complex" id="304" />
+      <Map s="Organism|Gonads|Endosome|Toxophore-FcRn_Complex" id="305" />
+      <Map s="Organism|SmallIntestine|Mucosa|UpperIleum|Endosome|Toxophore-FcRn_Complex" id="306" />
+      <Map s="Organism|SmallIntestine|Mucosa|UpperJejunum|Endosome|Toxophore-FcRn_Complex" id="307" />
+      <Map s="Organism|Bone|Interstitial|Toxophore" id="308" />
+      <Map s="Organism|Brain|Interstitial|Toxophore" id="309" />
+      <Map s="Organism|LargeIntestine|Mucosa|Caecum|Interstitial|Toxophore" id="310" />
+      <Map s="Organism|LargeIntestine|Mucosa|ColonAscendens|Interstitial|Toxophore" id="311" />
+      <Map s="Organism|LargeIntestine|Mucosa|ColonDescendens|Interstitial|Toxophore" id="312" />
+      <Map s="Organism|LargeIntestine|Mucosa|ColonSigmoid|Interstitial|Toxophore" id="313" />
+      <Map s="Organism|LargeIntestine|Mucosa|ColonTransversum|Interstitial|Toxophore" id="314" />
+      <Map s="Organism|SmallIntestine|Mucosa|Duodenum|Interstitial|Toxophore" id="315" />
+      <Map s="Organism|Fat|Interstitial|Toxophore" id="316" />
+      <Map s="Organism|Heart|Interstitial|Toxophore" id="317" />
+      <Map s="Organism|Kidney|Interstitial|Toxophore" id="318" />
+      <Map s="Organism|SmallIntestine|Mucosa|LowerIleum|Interstitial|Toxophore" id="319" />
+      <Map s="Organism|LargeIntestine|Interstitial|Toxophore" id="320" />
+      <Map s="Organism|Liver|Pericentral|Interstitial|Toxophore" id="321" />
+      <Map s="Organism|Liver|Periportal|Interstitial|Toxophore" id="322" />
+      <Map s="Organism|SmallIntestine|Mucosa|LowerJejunum|Interstitial|Toxophore" id="323" />
+      <Map s="Organism|Lung|Interstitial|Toxophore" id="324" />
+      <Map s="Organism|Muscle|Interstitial|Toxophore" id="325" />
+      <Map s="Organism|Pancreas|Interstitial|Toxophore" id="326" />
+      <Map s="Organism|LargeIntestine|Mucosa|Rectum|Interstitial|Toxophore" id="327" />
+      <Map s="Organism|SmallIntestine|Interstitial|Toxophore" id="328" />
+      <Map s="Organism|Skin|Interstitial|Toxophore" id="329" />
+      <Map s="Organism|Spleen|Interstitial|Toxophore" id="330" />
+      <Map s="Organism|Stomach|Interstitial|Toxophore" id="331" />
+      <Map s="Organism|Gonads|Interstitial|Toxophore" id="332" />
+      <Map s="Organism|SmallIntestine|Mucosa|UpperIleum|Interstitial|Toxophore" id="333" />
+      <Map s="Organism|SmallIntestine|Mucosa|UpperJejunum|Interstitial|Toxophore" id="334" />
+      <Map s="Toxophore|Kd (FcRn) in plasma/interstitial" id="335" />
+      <Map s="Organism|Bone|Interstitial|Toxophore-FcRn_Complex" id="336" />
+      <Map s="Organism|Brain|Interstitial|Toxophore-FcRn_Complex" id="337" />
+      <Map s="Organism|LargeIntestine|Mucosa|Caecum|Interstitial|Toxophore-FcRn_Complex" id="338" />
+      <Map s="Organism|LargeIntestine|Mucosa|ColonAscendens|Interstitial|Toxophore-FcRn_Complex" id="339" />
+      <Map s="Organism|LargeIntestine|Mucosa|ColonDescendens|Interstitial|Toxophore-FcRn_Complex" id="340" />
+      <Map s="Organism|LargeIntestine|Mucosa|ColonSigmoid|Interstitial|Toxophore-FcRn_Complex" id="341" />
+      <Map s="Organism|LargeIntestine|Mucosa|ColonTransversum|Interstitial|Toxophore-FcRn_Complex" id="342" />
+      <Map s="Organism|SmallIntestine|Mucosa|Duodenum|Interstitial|Toxophore-FcRn_Complex" id="343" />
+      <Map s="Organism|Fat|Interstitial|Toxophore-FcRn_Complex" id="344" />
+      <Map s="Organism|Heart|Interstitial|Toxophore-FcRn_Complex" id="345" />
+      <Map s="Organism|Kidney|Interstitial|Toxophore-FcRn_Complex" id="346" />
+      <Map s="Organism|SmallIntestine|Mucosa|LowerIleum|Interstitial|Toxophore-FcRn_Complex" id="347" />
+      <Map s="Organism|LargeIntestine|Interstitial|Toxophore-FcRn_Complex" id="348" />
+      <Map s="Organism|Liver|Pericentral|Interstitial|Toxophore-FcRn_Complex" id="349" />
+      <Map s="Organism|Liver|Periportal|Interstitial|Toxophore-FcRn_Complex" id="350" />
+      <Map s="Organism|SmallIntestine|Mucosa|LowerJejunum|Interstitial|Toxophore-FcRn_Complex" id="351" />
+      <Map s="Organism|Lung|Interstitial|Toxophore-FcRn_Complex" id="352" />
+      <Map s="Organism|Muscle|Interstitial|Toxophore-FcRn_Complex" id="353" />
+      <Map s="Organism|Pancreas|Interstitial|Toxophore-FcRn_Complex" id="354" />
+      <Map s="Organism|LargeIntestine|Mucosa|Rectum|Interstitial|Toxophore-FcRn_Complex" id="355" />
+      <Map s="Organism|SmallIntestine|Interstitial|Toxophore-FcRn_Complex" id="356" />
+      <Map s="Organism|Skin|Interstitial|Toxophore-FcRn_Complex" id="357" />
+      <Map s="Organism|Spleen|Interstitial|Toxophore-FcRn_Complex" id="358" />
+      <Map s="Organism|Stomach|Interstitial|Toxophore-FcRn_Complex" id="359" />
+      <Map s="Organism|Gonads|Interstitial|Toxophore-FcRn_Complex" id="360" />
+      <Map s="Organism|SmallIntestine|Mucosa|UpperIleum|Interstitial|Toxophore-FcRn_Complex" id="361" />
+      <Map s="Organism|SmallIntestine|Mucosa|UpperJejunum|Interstitial|Toxophore-FcRn_Complex" id="362" />
+      <Map s="Organism|Bone|Plasma|Toxophore" id="363" />
+      <Map s="Organism|Brain|Plasma|Toxophore" id="364" />
+      <Map s="Organism|LargeIntestine|Mucosa|Caecum|Plasma|Toxophore" id="365" />
+      <Map s="Organism|LargeIntestine|Mucosa|ColonAscendens|Plasma|Toxophore" id="366" />
+      <Map s="Organism|LargeIntestine|Mucosa|ColonDescendens|Plasma|Toxophore" id="367" />
+      <Map s="Organism|LargeIntestine|Mucosa|ColonSigmoid|Plasma|Toxophore" id="368" />
+      <Map s="Organism|LargeIntestine|Mucosa|ColonTransversum|Plasma|Toxophore" id="369" />
+      <Map s="Organism|SmallIntestine|Mucosa|Duodenum|Plasma|Toxophore" id="370" />
+      <Map s="Organism|Fat|Plasma|Toxophore" id="371" />
+      <Map s="Organism|Heart|Plasma|Toxophore" id="372" />
+      <Map s="Organism|Kidney|Plasma|Toxophore" id="373" />
+      <Map s="Organism|SmallIntestine|Mucosa|LowerIleum|Plasma|Toxophore" id="374" />
+      <Map s="Organism|LargeIntestine|Plasma|Toxophore" id="375" />
+      <Map s="Organism|Liver|Pericentral|Plasma|Toxophore" id="376" />
+      <Map s="Organism|Liver|Periportal|Plasma|Toxophore" id="377" />
+      <Map s="Organism|SmallIntestine|Mucosa|LowerJejunum|Plasma|Toxophore" id="378" />
+      <Map s="Organism|Lung|Plasma|Toxophore" id="379" />
+      <Map s="Organism|Muscle|Plasma|Toxophore" id="380" />
+      <Map s="Organism|Pancreas|Plasma|Toxophore" id="381" />
+      <Map s="Organism|LargeIntestine|Mucosa|Rectum|Plasma|Toxophore" id="382" />
+      <Map s="Organism|SmallIntestine|Plasma|Toxophore" id="383" />
+      <Map s="Organism|Skin|Plasma|Toxophore" id="384" />
+      <Map s="Organism|Spleen|Plasma|Toxophore" id="385" />
+      <Map s="Organism|Stomach|Plasma|Toxophore" id="386" />
+      <Map s="Organism|Gonads|Plasma|Toxophore" id="387" />
+      <Map s="Organism|SmallIntestine|Mucosa|UpperIleum|Plasma|Toxophore" id="388" />
+      <Map s="Organism|SmallIntestine|Mucosa|UpperJejunum|Plasma|Toxophore" id="389" />
+      <Map s="Organism|Bone|Plasma|Toxophore-FcRn_Complex" id="390" />
+      <Map s="Organism|Brain|Plasma|Toxophore-FcRn_Complex" id="391" />
+      <Map s="Organism|LargeIntestine|Mucosa|Caecum|Plasma|Toxophore-FcRn_Complex" id="392" />
+      <Map s="Organism|LargeIntestine|Mucosa|ColonAscendens|Plasma|Toxophore-FcRn_Complex" id="393" />
+      <Map s="Organism|LargeIntestine|Mucosa|ColonDescendens|Plasma|Toxophore-FcRn_Complex" id="394" />
+      <Map s="Organism|LargeIntestine|Mucosa|ColonSigmoid|Plasma|Toxophore-FcRn_Complex" id="395" />
+      <Map s="Organism|LargeIntestine|Mucosa|ColonTransversum|Plasma|Toxophore-FcRn_Complex" id="396" />
+      <Map s="Organism|SmallIntestine|Mucosa|Duodenum|Plasma|Toxophore-FcRn_Complex" id="397" />
+      <Map s="Organism|Fat|Plasma|Toxophore-FcRn_Complex" id="398" />
+      <Map s="Organism|Heart|Plasma|Toxophore-FcRn_Complex" id="399" />
+      <Map s="Organism|Kidney|Plasma|Toxophore-FcRn_Complex" id="400" />
+      <Map s="Organism|SmallIntestine|Mucosa|LowerIleum|Plasma|Toxophore-FcRn_Complex" id="401" />
+      <Map s="Organism|LargeIntestine|Plasma|Toxophore-FcRn_Complex" id="402" />
+      <Map s="Organism|Liver|Pericentral|Plasma|Toxophore-FcRn_Complex" id="403" />
+      <Map s="Organism|Liver|Periportal|Plasma|Toxophore-FcRn_Complex" id="404" />
+      <Map s="Organism|SmallIntestine|Mucosa|LowerJejunum|Plasma|Toxophore-FcRn_Complex" id="405" />
+      <Map s="Organism|Lung|Plasma|Toxophore-FcRn_Complex" id="406" />
+      <Map s="Organism|Muscle|Plasma|Toxophore-FcRn_Complex" id="407" />
+      <Map s="Organism|Pancreas|Plasma|Toxophore-FcRn_Complex" id="408" />
+      <Map s="Organism|LargeIntestine|Mucosa|Rectum|Plasma|Toxophore-FcRn_Complex" id="409" />
+      <Map s="Organism|SmallIntestine|Plasma|Toxophore-FcRn_Complex" id="410" />
+      <Map s="Organism|Skin|Plasma|Toxophore-FcRn_Complex" id="411" />
+      <Map s="Organism|Spleen|Plasma|Toxophore-FcRn_Complex" id="412" />
+      <Map s="Organism|Stomach|Plasma|Toxophore-FcRn_Complex" id="413" />
+      <Map s="Organism|Gonads|Plasma|Toxophore-FcRn_Complex" id="414" />
+      <Map s="Organism|SmallIntestine|Mucosa|UpperIleum|Plasma|Toxophore-FcRn_Complex" id="415" />
+      <Map s="Organism|SmallIntestine|Mucosa|UpperJejunum|Plasma|Toxophore-FcRn_Complex" id="416" />
+      <Map s="..|Toxophore" id="417" />
+      <Map s="Toxophore|kass (FcRn)" id="418" />
+      <Map s="..|Toxophore|Kd (FcRn) in endosomal space of container" id="419" />
+      <Map s="..|Toxophore-FcRn_Complex" id="420" />
+      <Map s="..|Lipophilicity (experiment)" id="421" />
+      <Map s="LogMA" id="422" />
+      <Map s="Log Units" id="423" />
+      <Map s="..|Fraction unbound (experiment)" id="424" />
+      <Map s="fu" id="425" />
+      <Map s="Fraction" id="426" />
+      <Map s="..|Hematocrit" id="427" />
+      <Map s="HCT" id="428" />
+      <Map s="LogP" id="429" />
+      <Map s="..|Partition coefficient (water/protein)" id="430" />
+      <Map s="KProt" id="431" />
+      <Map s="..|Vf (lipid, blood cells)" id="432" />
+      <Map s="f_lipids_rbc" id="433" />
+      <Map s="..|Vf (protein,blood cells)" id="434" />
+      <Map s="f_proteins_rbc" id="435" />
+      <Map s="..|Vf (water,blood cells)" id="436" />
+      <Map s="f_water_rbc" id="437" />
+      <Map s="..|Blood flow rate (liver)" id="438" />
+      <Map s="Q_liv" id="439" />
+      <Map s="Flow" id="440" />
+      <Map s="..|Blood flow rate (portal vein)" id="441" />
+      <Map s="Q_pve" id="442" />
+      <Map s="..|Blood/Plasma concentration ratio" id="443" />
+      <Map s="B2P" id="444" />
+      <Map s="..|Body weight" id="445" />
+      <Map s="BW" id="446" />
+      <Map s="Mass" id="447" />
+      <Map s="..|Fraction intracellular (liver)" id="448" />
+      <Map s="f_cell" id="449" />
+      <Map s="..|Plasma clearance" id="450" />
+      <Map s="CL_pls" id="451" />
+      <Map s="Flow per weight" id="452" />
+      <Map s="..|Volume (liver)" id="453" />
+      <Map s="V" id="454" />
+      <Map s="Volume" id="455" />
+      <Map s="..|Toxophore|Concentration" id="456" />
+      <Map s="C_cell" id="457" />
+      <Map s="Toxophore-Total Hepatic Clearance-Literature|Specific clearance" id="458" />
+      <Map s="CLspec" id="459" />
+      <Map s="..|..|Fraction intracellular" id="460" />
+      <Map s="..|..|Volume" id="461" />
+      <Map s="Neighborhoods|Periportal_int_Periportal_cell|Toxophore|Partition coefficient (intracellular/water)" id="462" />
+      <Map s="K_water_cell" id="463" />
+      <Map s="..|TMEFF2|Ontogeny factor" id="464" />
+      <Map s="Ontogeny_factor" id="465" />
+      <Map s="..|TMEFF2|Relative expression out." id="466" />
+      <Map s="Relative_expression_out" id="467" />
+      <Map s="TMEFF2|Reference concentration" id="468" />
+      <Map s="Reference_concentration" id="469" />
+      <Map s="synthese|k_deg" id="470" />
+      <Map s="k_deg" id="471" />
+      <Map s="..|TMEFF2|Concentration" id="472" />
+      <Map s="Concentration" id="473" />
+      <Map s="..|Volume" id="474" />
+      <Map s="TMEFF2" id="475" />
+      <Map s="..|ADC-TMEFF2 Complex|Concentration" id="476" />
+      <Map s="internalization|k_int" id="477" />
+      <Map s="k_int" id="478" />
+      <Map s="..|ADC_fragment" id="479" />
+      <Map s="ADC_fragment" id="480" />
+      <Map s="..|is_interstitial" id="481" />
+      <Map s="is_interstitial" id="482" />
+      <Map s="ADC_TMEFF2_Complex" id="483" />
+      <Map s="..|..|Interstitial|ADC-TMEFF2 Complex" id="484" />
+      <Map s="..|is_cellular" id="485" />
+      <Map s="is_cellular" id="486" />
+      <Map s="Toxophore" id="487" />
+      <Map s="synthese|syn_fac" id="488" />
+      <Map s="syn_fac" id="489" />
+    </StringMap>
+  </FormulaCache>
+  <DiagramModel IsLayouted="True">
+    <ReactionNode Id="LpGBXf5veE-wo6ep5QGpwQ" Name="FcRn binding ADC in endosomal space" Location="460.043976 110.898582" Size="185.770813 36.0729141" Hidden="false" IsVisible="true" LocationFixed="false" UserFlags="6" Description="FcRn binding ADC in endosomal space" NodeSize="Middle" DisplayEductsRight="false" />
+    <MoleculeNode Id="f9b81a21-eafb-4a36-a158-3955118b5d01" Name="FcRn" Location="364.108551 179.580719" Size="40.484375 15" Hidden="false" IsVisible="true" LocationFixed="false" UserFlags="4" Description="FcRn" NodeSize="Middle" />
+    <MoleculeNode Id="ce6b4f43-5400-4d65-b343-3bef8d13a3ec" Name="FcRn kinetics endosome" Location="480.883362 38.75" Size="131.65625 15" Hidden="false" IsVisible="true" LocationFixed="false" UserFlags="4" Description="FcRn kinetics endosome" NodeSize="Middle" />
+    <ReactionNode Id="jnCzPIe_ykWU4hHh0glh9Q" Name="FcRn binding ADC in interstitial" Location="233.8487 164.596924" Size="147.531235 36.0729141" Hidden="false" IsVisible="true" LocationFixed="false" UserFlags="6" Description="FcRn binding ADC in interstitial" NodeSize="Middle" DisplayEductsRight="false" />
+    <MoleculeNode Id="52f38a1e-2a97-4fde-ba95-4146a250204b" Name="FcRn kinetics interstitial" Location="6.25 119.611908" Size="127.145821 15" Hidden="false" IsVisible="true" LocationFixed="false" UserFlags="4" Description="FcRn kinetics interstitial" NodeSize="Middle" />
+    <ReactionNode Id="8CdZY4RiNEmYjCzYNrXCJQ" Name="FcRn binding ADC in plasma" Location="317.85437 249.066071" Size="136.677063 36.0729065" Hidden="false" IsVisible="true" LocationFixed="false" UserFlags="6" Description="FcRn binding ADC in plasma" NodeSize="Middle" DisplayEductsRight="false" />
+    <MoleculeNode Id="5751c5d4-b3b2-49dc-91f2-903963d54524" Name="FcRn kinetics plasma" Location="208.9808 309.7731" Size="116.291656 15" Hidden="false" IsVisible="true" LocationFixed="false" UserFlags="4" Description="FcRn kinetics plasma" NodeSize="Middle" />
+    <ReactionNode Id="L65arx7KHEGZHxkyLRV8Uw" Name="FcRn binding endogenous Igg" Location="509.316833 215.137726" Size="142.0625 36.07292" Hidden="false" IsVisible="true" LocationFixed="false" UserFlags="6" Description="FcRn binding endogenous Igg&#xA;Binding to FcRn in endogenous Igg" NodeSize="Middle" DisplayEductsRight="false" />
+    <MoleculeNode Id="7b3566a2-9b13-4c62-9906-712397cca77c" Name="LigandEndo" Location="494.916473 273.6588" Size="72.00522 15" Hidden="false" IsVisible="true" LocationFixed="false" UserFlags="4" Description="LigandEndo" NodeSize="Middle" />
+    <MoleculeNode Id="14a0d9ae-3303-4813-b52e-ae39af79e4ab" Name="LigandEndo_Complex" Location="623.002747 208.489532" Size="120.041687 15" Hidden="false" IsVisible="true" LocationFixed="false" UserFlags="4" Description="LigandEndo_Complex" NodeSize="Middle" />
+    <ReactionNode Id="7b062ReDIUaHOGIanbo2dQ" Name="FcRn binding tissue ADC" Location="498.770172 554.7048" Size="118.958313 36.072937" Hidden="false" IsVisible="true" LocationFixed="false" UserFlags="6" Description="FcRn binding tissue ADC" NodeSize="Middle" DisplayEductsRight="false" />
+    <MoleculeNode Id="c37f95f2-f1e9-4dd9-8fc2-991a1c72a0c8" Name="ADC" Location="507.2716 608.1553" Size="37.520813 15" Hidden="false" IsVisible="true" LocationFixed="false" UserFlags="4" Description="ADC" NodeSize="Middle" />
+    <MoleculeNode Id="9c9f2847-04e7-4a95-b0c6-7601dcc6f7d4" Name="ADC-FcRn_Complex" Location="460.869141 489.806641" Size="114.59375 15" Hidden="false" IsVisible="true" LocationFixed="false" UserFlags="4" Description="ADC-FcRn_Complex" NodeSize="Middle" />
+    <ReactionNode Id="ZSkc-MZR40uHFuPHK5JIQg" Name="ADC-TMEFF2-Boswell et al" Location="531.957458 670.2709" Size="130.911469 36.072937" Hidden="false" IsVisible="true" LocationFixed="false" UserFlags="6" Description="ADC-TMEFF2-Boswell et al" NodeSize="Middle" DisplayEductsRight="false" />
+    <MoleculeNode Id="695ded43-056e-486a-817a-861555317bd4" Name="TMEFF2" Location="384.7638 718.7497" Size="56.4791565 15" Hidden="false" IsVisible="true" LocationFixed="false" UserFlags="4" Description="TMEFF2" NodeSize="Middle" />
+    <MoleculeNode Id="2b350c70-7750-4919-8a15-11affb7fc608" Name="ADC-TMEFF2 Complex" Location="629.409546 688.7366" Size="127.536438 15" Hidden="false" IsVisible="true" LocationFixed="false" UserFlags="4" Description="ADC-TMEFF2 Complex" NodeSize="Middle" />
+    <MoleculeNode Id="a597e0f1-83fc-4f08-86e9-33673250183a" Name="Toxophore" Location="606.43335 1006.98529" Size="65.99481 15" Hidden="false" IsVisible="true" LocationFixed="false" UserFlags="4" Description="Toxophore" NodeSize="Middle" />
+    <ReactionNode Id="hWy2uNBv7kuu8aL1q7z1Ng" Name="Toxophore-Total Hepatic Clearance-Literature" Location="502.679718 1079.2085" Size="217.5781 36.072876" Hidden="false" IsVisible="true" LocationFixed="false" UserFlags="6" Description="Toxophore-Total Hepatic Clearance-Literature" NodeSize="Middle" DisplayEductsRight="false" />
+    <MoleculeNode Id="3a979653-5f6a-4142-812c-405ae77b3403" Name="Toxophore-Undefined Liver Metabolite" Location="464.9978 1149.79907" Size="196.427063 15" Hidden="false" IsVisible="true" LocationFixed="false" UserFlags="4" Description="Toxophore-Undefined Liver Metabolite" NodeSize="Middle" />
+    <MoleculeNode Id="6622131e-c4c8-44bd-b445-32ea542eecdb" Name="Undefined Liver" Location="282.476837 1014.30347" Size="89.70834 15" Hidden="false" IsVisible="true" LocationFixed="false" UserFlags="4" Description="Undefined Liver" NodeSize="Middle" />
+    <ReactionNode Id="AQwu7m-g7kemH6jrGbGspg" Name="degradation" Location="378.95636 774.0041" Size="56.40625 36.072937" Hidden="false" IsVisible="true" LocationFixed="false" UserFlags="6" Description="degradation" NodeSize="Middle" DisplayEductsRight="false" />
+    <ReactionNode Id="kSRLkaCLSUeZH7mi76MEuA" Name="internalization" Location="819.8962 639.3111" Size="66.06769 36.072937" Hidden="false" IsVisible="true" LocationFixed="false" UserFlags="6" Description="internalization" NodeSize="Middle" DisplayEductsRight="false" />
+    <MoleculeNode Id="22229429-d36b-4c04-8ce4-be7fde003007" Name="ADC_fragment" Location="844.417 581.7585" Size="85.5 15" Hidden="false" IsVisible="true" LocationFixed="false" UserFlags="4" Description="ADC_fragment" NodeSize="Middle" />
+    <MoleculeNode Id="358f0b64-8663-42b8-8c3b-866a9a71aeca" Name="is_interstitial" Location="868.240845 679.093445" Size="73.953125 15" Hidden="false" IsVisible="true" LocationFixed="false" UserFlags="4" Description="is_interstitial" NodeSize="Middle" />
+    <ReactionNode Id="wAM3ZQsBG0mw1ZCDu4HV1w" Name="internalization_cell" Location="725.059631 960.9251" Size="88.08331 36.072937" Hidden="false" IsVisible="true" LocationFixed="false" UserFlags="6" Description="internalization_cell" NodeSize="Middle" DisplayEductsRight="false" />
+    <MoleculeNode Id="664a4d56-745f-4460-9b95-8e4748bb7cdb" Name="is_cellular" Location="805.2943 931.716858" Size="62.630188 15" Hidden="false" IsVisible="true" LocationFixed="false" UserFlags="4" Description="is_cellular" NodeSize="Middle" />
+    <ReactionNode Id="YqiS65XBjEK4rP_XuwDznw" Name="synthese" Location="343.343445 690.671143" Size="42.69272 36.072937" Hidden="false" IsVisible="true" LocationFixed="false" UserFlags="6" Description="synthese" NodeSize="Middle" DisplayEductsRight="false" />
+  </DiagramModel>
+</ReactionBuildingBlock>

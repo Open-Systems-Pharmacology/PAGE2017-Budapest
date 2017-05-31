@@ -1,0 +1,146 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ReactionBuildingBlock id="JGQ9tdUqM0KiMAX_8kzWGw" name="Reaction" icon="Reaction" bbVersion="8" version="8" modelLicences="" cs="8C66CCB2">
+  <Creation createdAt="5247477386919455001" createdBy="gbckb" creationMode="New" origin="MoBi" version="6.0.2" />
+  <Builders>
+    <ReactionBuilder id="zXC4HXlSr0KLwp5IbHEWOw" name="degradation" icon="Reaction" mode="Logical" containerType="Other" dimension="Amount per time" createProcessRateParameter="0" processRateParameterPersistable="0" formula="4c056b90-49dc-4a21-9716-67089bb8690b">
+      <ContainerCriteria />
+      <Educts>
+        <ReactionPartnerBuilder moleculeName="TMEFF2" stoichiometricCoefficient="1" />
+      </Educts>
+    </ReactionBuilder>
+    <ReactionBuilder id="BHwARIIFokKs9yKOlI4WxQ" name="internalization" icon="Reaction" mode="Logical" containerType="Other" dimension="Amount per time" createProcessRateParameter="0" processRateParameterPersistable="0" formula="a062b48d-8e07-45c5-95a6-b4b20a4e37b0">
+      <Children>
+        <Parameter id="wPAtBYuVtUOe322Cf-BKyA" name="k_int" icon="Parameter" persistable="0" isFixedValue="0" dim="Inversed time" quantityType="Parameter" buildMode="Global" value="0.210184" displayUnit="1/min">
+          <Info flag="10" seq="1" ref="0" bb="2" group="143" />
+          <Origin />
+        </Parameter>
+      </Children>
+      <ContainerCriteria />
+      <Educts>
+        <ReactionPartnerBuilder moleculeName="ADC-TMEFF2 Complex" stoichiometricCoefficient="1" />
+      </Educts>
+      <Products>
+        <ReactionPartnerBuilder moleculeName="ADC_fragment" stoichiometricCoefficient="1" />
+      </Products>
+      <ModifierNames>
+        <ModifierNamesChild>is_interstitial</ModifierNamesChild>
+      </ModifierNames>
+    </ReactionBuilder>
+    <ReactionBuilder id="vRPHrZONlU-_LEZm_aKsVQ" name="internalization_cell" icon="Reaction" mode="Logical" containerType="Other" dimension="Amount per time" createProcessRateParameter="0" processRateParameterPersistable="0" formula="f62034b2-8c12-4517-97a3-3d99a72b2a99">
+      <ContainerCriteria />
+      <Products>
+        <ReactionPartnerBuilder moleculeName="Toxophore" stoichiometricCoefficient="3.2" />
+      </Products>
+      <ModifierNames>
+        <ModifierNamesChild>is_cellular</ModifierNamesChild>
+      </ModifierNames>
+    </ReactionBuilder>
+    <ReactionBuilder id="mLLg1McQ30SQRX0W4MiU6w" name="synthese" icon="Reaction" mode="Logical" containerType="Other" dimension="Amount per time" createProcessRateParameter="0" processRateParameterPersistable="0" formula="e6162378-8195-4947-bd54-50f9c4fdb813">
+      <Children>
+        <Parameter id="1UGX1klm0kiAR2O7ytFzSQ" name="k_deg" icon="Parameter" persistable="0" isFixedValue="0" dim="Inversed time" quantityType="Parameter" buildMode="Global" value="0.0036" displayUnit="1/min">
+          <Info flag="10" seq="1" ref="0" bb="2" group="143" />
+          <Origin />
+        </Parameter>
+        <Parameter id="ZOpH7ahOXUuNCso1J0J1xQ" name="syn_fac" icon="Parameter" persistable="0" isFixedValue="0" quantityType="Parameter" buildMode="Global" value="1">
+          <Info flag="10" seq="1" ref="0" bb="2" group="143" />
+          <Origin />
+        </Parameter>
+      </Children>
+      <ContainerCriteria />
+      <Products>
+        <ReactionPartnerBuilder moleculeName="TMEFF2" stoichiometricCoefficient="1" />
+      </Products>
+    </ReactionBuilder>
+  </Builders>
+  <FormulaCache>
+    <Formulas>
+      <Formula id="4c056b90-49dc-4a21-9716-67089bb8690b" name="degradation" dim="Amount per time" formula="k_deg * TMEFF2">
+        <Paths>
+          <Path path="0" as="1" />
+          <Path path="2" as="3" dim="4" />
+          <Path path="5" as="6" dim="7" />
+          <Path path="8" as="9" dim="10" />
+          <Path path="11" as="12" dim="7" />
+          <Path path="13" as="14" dim="14" />
+          <Path path="15" as="16" dim="17" />
+        </Paths>
+      </Formula>
+      <Formula id="a062b48d-8e07-45c5-95a6-b4b20a4e37b0" name="formula_internalization" dim="Amount per time" formula="k_int*ADC_TMEFF2_Complex">
+        <Paths>
+          <Path path="18" as="12" dim="7" />
+          <Path path="19" as="20" dim="10" />
+          <Path path="21" as="22" dim="17" />
+          <Path path="23" as="24" dim="17" />
+          <Path path="25" as="26" dim="17" />
+        </Paths>
+      </Formula>
+      <Formula id="f62034b2-8c12-4517-97a3-3d99a72b2a99" name="formula_internalization_cell" dim="Amount per time" formula="k_int*ADC_TMEFF2_Complex">
+        <Paths>
+          <Path path="19" as="20" dim="10" />
+          <Path path="27" as="26" dim="17" />
+          <Path path="28" as="29" dim="17" />
+          <Path path="30" as="31" dim="17" />
+        </Paths>
+      </Formula>
+      <Formula id="e6162378-8195-4947-bd54-50f9c4fdb813" name="synthesis" dim="Amount per time" formula=" syn_fac * k_deg*Relative_expression_out*Reference_concentration*Ontogeny_factor * Volume">
+        <Paths>
+          <Path path="8" as="9" dim="10" />
+          <Path path="5" as="6" dim="7" />
+          <Path path="0" as="1" />
+          <Path path="2" as="3" dim="4" />
+          <Path path="32" as="33" />
+          <Path path="13" as="14" dim="14" />
+          <Path path="15" as="16" dim="17" />
+        </Paths>
+      </Formula>
+    </Formulas>
+    <StringMap>
+      <Map s="..|TMEFF2|Ontogeny factor" id="0" />
+      <Map s="Ontogeny_factor" id="1" />
+      <Map s="..|TMEFF2|Relative expression out." id="2" />
+      <Map s="Relative_expression_out" id="3" />
+      <Map s="Fraction" id="4" />
+      <Map s="TMEFF2|Reference concentration" id="5" />
+      <Map s="Reference_concentration" id="6" />
+      <Map s="Concentration (molar)" id="7" />
+      <Map s="synthese|k_deg" id="8" />
+      <Map s="k_deg" id="9" />
+      <Map s="Inversed time" id="10" />
+      <Map s="..|TMEFF2|Concentration" id="11" />
+      <Map s="Concentration" id="12" />
+      <Map s="..|Volume" id="13" />
+      <Map s="Volume" id="14" />
+      <Map s="..|TMEFF2" id="15" />
+      <Map s="TMEFF2" id="16" />
+      <Map s="Amount" id="17" />
+      <Map s="..|ADC-TMEFF2 Complex|Concentration" id="18" />
+      <Map s="internalization|k_int" id="19" />
+      <Map s="k_int" id="20" />
+      <Map s="..|ADC_fragment" id="21" />
+      <Map s="ADC_fragment" id="22" />
+      <Map s="..|is_interstitial" id="23" />
+      <Map s="is_interstitial" id="24" />
+      <Map s="..|ADC-TMEFF2 Complex" id="25" />
+      <Map s="ADC_TMEFF2_Complex" id="26" />
+      <Map s="..|..|Interstitial|ADC-TMEFF2 Complex" id="27" />
+      <Map s="..|is_cellular" id="28" />
+      <Map s="is_cellular" id="29" />
+      <Map s="..|Toxophore" id="30" />
+      <Map s="Toxophore" id="31" />
+      <Map s="synthese|syn_fac" id="32" />
+      <Map s="syn_fac" id="33" />
+    </StringMap>
+  </FormulaCache>
+  <DiagramModel IsLayouted="True">
+    <ReactionNode Id="zXC4HXlSr0KLwp5IbHEWOw" Name="degradation" Location="214.391769 106" Size="56.40625 36.07292" Hidden="false" IsVisible="true" LocationFixed="false" UserFlags="6" Description="degradation" NodeSize="Middle" DisplayEductsRight="false" />
+    <MoleculeNode Id="349f5224-1857-4397-9211-3e8b52d3861f" Name="TMEFF2" Location="179.5 156.364914" Size="56.4791565 15" Hidden="false" IsVisible="true" LocationFixed="false" UserFlags="4" Description="TMEFF2" NodeSize="Middle" />
+    <ReactionNode Id="BHwARIIFokKs9yKOlI4WxQ" Name="internalization" Location="301.373474 259.866119" Size="66.06772 36.0729065" Hidden="false" IsVisible="true" LocationFixed="false" UserFlags="6" Description="internalization" NodeSize="Middle" DisplayEductsRight="false" />
+    <MoleculeNode Id="1011d818-a238-40c6-8917-9db60e3b9e70" Name="ADC-TMEFF2 Complex" Location="179.5 188.5" Size="127.536438 15" Hidden="false" IsVisible="true" LocationFixed="false" UserFlags="4" Description="ADC-TMEFF2 Complex" NodeSize="Middle" />
+    <MoleculeNode Id="2699c5fe-8263-4703-b2e6-c0ecf74cdbef" Name="ADC_fragment" Location="179.5 218.5" Size="85.5 15" Hidden="false" IsVisible="true" LocationFixed="false" UserFlags="4" Description="ADC_fragment" NodeSize="Middle" />
+    <MoleculeNode Id="36ede4ba-3e7b-45e8-88e1-8017d2dbf75b" Name="is_interstitial" Location="179.5 248.5" Size="73.953125 15" Hidden="false" IsVisible="true" LocationFixed="false" UserFlags="4" Description="is_interstitial" NodeSize="Middle" />
+    <ReactionNode Id="vRPHrZONlU-_LEZm_aKsVQ" Name="internalization_cell" Location="308.6839 357.9208" Size="88.08331 36.0729065" Hidden="false" IsVisible="true" LocationFixed="false" UserFlags="6" Description="internalization_cell" NodeSize="Middle" DisplayEductsRight="false" />
+    <MoleculeNode Id="ff061f93-5af7-40da-b6df-185d324b222a" Name="Toxophore" Location="179.5 308.5" Size="65.99478 15" Hidden="false" IsVisible="true" LocationFixed="false" UserFlags="4" Description="Toxophore" NodeSize="Middle" />
+    <MoleculeNode Id="d2386fd5-b08a-4c9c-bb47-5a91e9a6ce3c" Name="is_cellular" Location="179.5 338.5" Size="62.6302032 15" Hidden="false" IsVisible="true" LocationFixed="false" UserFlags="4" Description="is_cellular" NodeSize="Middle" />
+    <ReactionNode Id="mLLg1McQ30SQRX0W4MiU6w" Name="synthese" Location="287.548218 133.623123" Size="42.69272 36.07292" Hidden="false" IsVisible="true" LocationFixed="false" UserFlags="6" Description="synthese" NodeSize="Middle" DisplayEductsRight="false" />
+  </DiagramModel>
+</ReactionBuildingBlock>
